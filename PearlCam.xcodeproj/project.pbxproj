@@ -1,0 +1,747 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06530D6038D4923556CE4369 /* Pods_PearlCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC368A66AD6D831CBCF171A8 /* Pods_PearlCam.framework */; };
+		18BBA8C21EEBAB8C00BE0090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA8C11EEBAB8C00BE0090 /* AppDelegate.swift */; };
+		18BBA8C41EEBAB8C00BE0090 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA8C31EEBAB8C00BE0090 /* ViewController.swift */; };
+		18BBA8C71EEBAB8C00BE0090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8C51EEBAB8C00BE0090 /* Main.storyboard */; };
+		18BBA8C91EEBAB8C00BE0090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8C81EEBAB8C00BE0090 /* Assets.xcassets */; };
+		18BBA8CC1EEBAB8C00BE0090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8CA1EEBAB8C00BE0090 /* LaunchScreen.storyboard */; };
+		18BBA8FE1EEBACD400BE0090 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA8E81EEBACD400BE0090 /* CameraController.swift */; };
+		18BBA8FF1EEBACD400BE0090 /* CameraUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA8EA1EEBACD400BE0090 /* CameraUIViewController.swift */; };
+		18BBA9001EEBACD400BE0090 /* CameraUIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8EB1EEBACD400BE0090 /* CameraUIViewController.xib */; };
+		18BBA9011EEBACD400BE0090 /* FatalErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA8EC1EEBACD400BE0090 /* FatalErrorView.swift */; };
+		18BBA9021EEBACD400BE0090 /* ViewFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA8ED1EEBACD400BE0090 /* ViewFinder.swift */; };
+		18BBA9031EEBACD400BE0090 /* CandleLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8F01EEBACD400BE0090 /* CandleLight.png */; };
+		18BBA9041EEBACD400BE0090 /* ColorPunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8F11EEBACD400BE0090 /* ColorPunch.png */; };
+		18BBA9051EEBACD400BE0090 /* ColorPunchCool.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8F21EEBACD400BE0090 /* ColorPunchCool.png */; };
+		18BBA9061EEBACD400BE0090 /* Earthy.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8F31EEBACD400BE0090 /* Earthy.png */; };
+		18BBA9071EEBACD400BE0090 /* FilmStock.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8F41EEBACD400BE0090 /* FilmStock.png */; };
+		18BBA9081EEBACD400BE0090 /* Intensify.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8F51EEBACD400BE0090 /* Intensify.png */; };
+		18BBA9091EEBACD400BE0090 /* Lenox.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8F61EEBACD400BE0090 /* Lenox.png */; };
+		18BBA90A1EEBACD400BE0090 /* lookup_amatorka.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8F71EEBACD400BE0090 /* lookup_amatorka.png */; };
+		18BBA90B1EEBACD400BE0090 /* lookup_miss_etikate.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8F81EEBACD400BE0090 /* lookup_miss_etikate.png */; };
+		18BBA90C1EEBACD400BE0090 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8F91EEBACD400BE0090 /* lookup_soft_elegance_2.png */; };
+		18BBA90D1EEBACD400BE0090 /* Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8FA1EEBACD400BE0090 /* Red.png */; };
+		18BBA90E1EEBACD400BE0090 /* Remy.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8FB1EEBACD400BE0090 /* Remy.png */; };
+		18BBA90F1EEBACD400BE0090 /* PearlCamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA8FC1EEBACD400BE0090 /* PearlCamViewController.swift */; };
+		18BBA9101EEBACD400BE0090 /* PearlCamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA8FD1EEBACD400BE0090 /* PearlCamViewController.xib */; };
+		18BBA9221EEBACF000BE0090 /* ColorPresetThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9161EEBACF000BE0090 /* ColorPresetThumbnailView.swift */; };
+		18BBA9231EEBACF000BE0090 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9171EEBACF000BE0090 /* FilterManager.swift */; };
+		18BBA9241EEBACF000BE0090 /* FilterSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9181EEBACF000BE0090 /* FilterSelectorView.swift */; };
+		18BBA9251EEBACF000BE0090 /* Pipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9191EEBACF000BE0090 /* Pipeline.swift */; };
+		18BBA9261EEBACF000BE0090 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA91A1EEBACF000BE0090 /* Processor.swift */; };
+		18BBA9271EEBACF000BE0090 /* ExposureFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA91C1EEBACF000BE0090 /* ExposureFilterNode.swift */; };
+		18BBA9281EEBACF000BE0090 /* LookupFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA91D1EEBACF000BE0090 /* LookupFilterNode.swift */; };
+		18BBA9291EEBACF000BE0090 /* PearlFXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA91E1EEBACF000BE0090 /* PearlFXViewController.swift */; };
+		18BBA92A1EEBACF000BE0090 /* PearlFXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA91F1EEBACF000BE0090 /* PearlFXViewController.xib */; };
+		18BBA92B1EEBACF000BE0090 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA9201EEBACF000BE0090 /* test.jpg */; };
+		18BBA92C1EEBACF000BE0090 /* test2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA9211EEBACF000BE0090 /* test2.jpg */; };
+		18BBA92E1EEBAD1200BE0090 /* PearlCam.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA92D1EEBAD1200BE0090 /* PearlCam.xcassets */; };
+		18BBA9361EEBAE8F00BE0090 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9341EEBAE8F00BE0090 /* ImageUtils.swift */; };
+		18BBA9371EEBAE8F00BE0090 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9351EEBAE8F00BE0090 /* PushButton.swift */; };
+		18BBA9381EEBAF9C00BE0090 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BBA8DF1EEBABC800BE0090 /* GPUImage.framework */; };
+		18BBA93A1EEBAFE500BE0090 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18BBA8DF1EEBABC800BE0090 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18BBA93F1EEC532800BE0090 /* BrightnessFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA93D1EEC532800BE0090 /* BrightnessFilterViewController.swift */; };
+		18BBA9401EEC532800BE0090 /* BrightnessFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA93E1EEC532800BE0090 /* BrightnessFilterViewController.xib */; };
+		18BBA9421EEC550F00BE0090 /* FXSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9411EEC550F00BE0090 /* FXSlider.swift */; };
+		18BBA9441EEC5CE400BE0090 /* AdjustmentSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9431EEC5CE400BE0090 /* AdjustmentSelectorView.swift */; };
+		18BBA9481EEC72B600BE0090 /* AdjustmentUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9471EEC72B600BE0090 /* AdjustmentUIViewController.swift */; };
+		18BBA94A1EEC73AF00BE0090 /* ContrastFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9491EEC73AF00BE0090 /* ContrastFilterNode.swift */; };
+		18BBA94E1EEC777A00BE0090 /* HighlightShadowFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA94D1EEC777A00BE0090 /* HighlightShadowFilterNode.swift */; };
+		18BBA9501EEC77FB00BE0090 /* WhitebalanceFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA94F1EEC77FB00BE0090 /* WhitebalanceFilterNode.swift */; };
+		18BBA9521EEC789400BE0090 /* VibranceFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9511EEC789400BE0090 /* VibranceFilterNode.swift */; };
+		18BBA9541EEC78F000BE0090 /* SharpenFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9531EEC78F000BE0090 /* SharpenFilterNode.swift */; };
+		18BBA9571EEC7B9400BE0090 /* LightShadowFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9551EEC7B9400BE0090 /* LightShadowFilterViewController.swift */; };
+		18BBA9581EEC7B9400BE0090 /* LightShadowFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA9561EEC7B9400BE0090 /* LightShadowFilterViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18BBA8DA1EEBABC800BE0090 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18BBA8D31EEBABC700BE0090 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC6E7CAB1C39A9D8006DF678;
+			remoteInfo = GPUImage_macOS;
+		};
+		18BBA8DC1EEBABC800BE0090 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18BBA8D31EEBABC700BE0090 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC6E7CB51C39A9D8006DF678;
+			remoteInfo = GPUImageTests_macOS;
+		};
+		18BBA8DE1EEBABC800BE0090 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18BBA8D31EEBABC700BE0090 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC9E34E91E524A2200B8604F;
+			remoteInfo = GPUImage_iOS;
+		};
+		18BBA8E01EEBABC800BE0090 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18BBA8D31EEBABC700BE0090 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC9E34F11E524A2200B8604F;
+			remoteInfo = GPUImageTests_iOS;
+		};
+		18BBA8E21EEBABDC00BE0090 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18BBA8D31EEBABC700BE0090 /* GPUImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BC9E34E81E524A2200B8604F;
+			remoteInfo = GPUImage_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		18BBA9391EEBAFD000BE0090 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				18BBA93A1EEBAFE500BE0090 /* GPUImage.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		18BBA8BE1EEBAB8C00BE0090 /* PearlCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PearlCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BBA8C11EEBAB8C00BE0090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18BBA8C31EEBAB8C00BE0090 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18BBA8C61EEBAB8C00BE0090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18BBA8C81EEBAB8C00BE0090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18BBA8CB1EEBAB8C00BE0090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18BBA8CD1EEBAB8C00BE0090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BBA8D31EEBABC700BE0090 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../../Downloads/GPUImage2-master/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
+		18BBA8E81EEBACD400BE0090 /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		18BBA8EA1EEBACD400BE0090 /* CameraUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraUIViewController.swift; sourceTree = "<group>"; };
+		18BBA8EB1EEBACD400BE0090 /* CameraUIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraUIViewController.xib; sourceTree = "<group>"; };
+		18BBA8EC1EEBACD400BE0090 /* FatalErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FatalErrorView.swift; sourceTree = "<group>"; };
+		18BBA8ED1EEBACD400BE0090 /* ViewFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFinder.swift; sourceTree = "<group>"; };
+		18BBA8F01EEBACD400BE0090 /* CandleLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CandleLight.png; sourceTree = "<group>"; };
+		18BBA8F11EEBACD400BE0090 /* ColorPunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPunch.png; sourceTree = "<group>"; };
+		18BBA8F21EEBACD400BE0090 /* ColorPunchCool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorPunchCool.png; sourceTree = "<group>"; };
+		18BBA8F31EEBACD400BE0090 /* Earthy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Earthy.png; sourceTree = "<group>"; };
+		18BBA8F41EEBACD400BE0090 /* FilmStock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FilmStock.png; sourceTree = "<group>"; };
+		18BBA8F51EEBACD400BE0090 /* Intensify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Intensify.png; sourceTree = "<group>"; };
+		18BBA8F61EEBACD400BE0090 /* Lenox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lenox.png; sourceTree = "<group>"; };
+		18BBA8F71EEBACD400BE0090 /* lookup_amatorka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_amatorka.png; sourceTree = "<group>"; };
+		18BBA8F81EEBACD400BE0090 /* lookup_miss_etikate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_miss_etikate.png; sourceTree = "<group>"; };
+		18BBA8F91EEBACD400BE0090 /* lookup_soft_elegance_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_soft_elegance_2.png; sourceTree = "<group>"; };
+		18BBA8FA1EEBACD400BE0090 /* Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red.png; sourceTree = "<group>"; };
+		18BBA8FB1EEBACD400BE0090 /* Remy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Remy.png; sourceTree = "<group>"; };
+		18BBA8FC1EEBACD400BE0090 /* PearlCamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PearlCamViewController.swift; sourceTree = "<group>"; };
+		18BBA8FD1EEBACD400BE0090 /* PearlCamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PearlCamViewController.xib; sourceTree = "<group>"; };
+		18BBA9161EEBACF000BE0090 /* ColorPresetThumbnailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPresetThumbnailView.swift; sourceTree = "<group>"; };
+		18BBA9171EEBACF000BE0090 /* FilterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
+		18BBA9181EEBACF000BE0090 /* FilterSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterSelectorView.swift; sourceTree = "<group>"; };
+		18BBA9191EEBACF000BE0090 /* Pipeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pipeline.swift; sourceTree = "<group>"; };
+		18BBA91A1EEBACF000BE0090 /* Processor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Processor.swift; sourceTree = "<group>"; };
+		18BBA91C1EEBACF000BE0090 /* ExposureFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExposureFilterNode.swift; sourceTree = "<group>"; };
+		18BBA91D1EEBACF000BE0090 /* LookupFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupFilterNode.swift; sourceTree = "<group>"; };
+		18BBA91E1EEBACF000BE0090 /* PearlFXViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PearlFXViewController.swift; sourceTree = "<group>"; };
+		18BBA91F1EEBACF000BE0090 /* PearlFXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PearlFXViewController.xib; sourceTree = "<group>"; };
+		18BBA9201EEBACF000BE0090 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		18BBA9211EEBACF000BE0090 /* test2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test2.jpg; sourceTree = "<group>"; };
+		18BBA92D1EEBAD1200BE0090 /* PearlCam.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PearlCam.xcassets; sourceTree = "<group>"; };
+		18BBA9341EEBAE8F00BE0090 /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		18BBA9351EEBAE8F00BE0090 /* PushButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
+		18BBA93D1EEC532800BE0090 /* BrightnessFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightnessFilterViewController.swift; sourceTree = "<group>"; };
+		18BBA93E1EEC532800BE0090 /* BrightnessFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrightnessFilterViewController.xib; sourceTree = "<group>"; };
+		18BBA9411EEC550F00BE0090 /* FXSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXSlider.swift; sourceTree = "<group>"; };
+		18BBA9431EEC5CE400BE0090 /* AdjustmentSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjustmentSelectorView.swift; sourceTree = "<group>"; };
+		18BBA9471EEC72B600BE0090 /* AdjustmentUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjustmentUIViewController.swift; sourceTree = "<group>"; };
+		18BBA9491EEC73AF00BE0090 /* ContrastFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContrastFilterNode.swift; sourceTree = "<group>"; };
+		18BBA94D1EEC777A00BE0090 /* HighlightShadowFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightShadowFilterNode.swift; sourceTree = "<group>"; };
+		18BBA94F1EEC77FB00BE0090 /* WhitebalanceFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhitebalanceFilterNode.swift; sourceTree = "<group>"; };
+		18BBA9511EEC789400BE0090 /* VibranceFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibranceFilterNode.swift; sourceTree = "<group>"; };
+		18BBA9531EEC78F000BE0090 /* SharpenFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharpenFilterNode.swift; sourceTree = "<group>"; };
+		18BBA9551EEC7B9400BE0090 /* LightShadowFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightShadowFilterViewController.swift; sourceTree = "<group>"; };
+		18BBA9561EEC7B9400BE0090 /* LightShadowFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightShadowFilterViewController.xib; sourceTree = "<group>"; };
+		31BC8A65091AB243CCFB51F3 /* Pods-PearlCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PearlCam.release.xcconfig"; path = "Pods/Target Support Files/Pods-PearlCam/Pods-PearlCam.release.xcconfig"; sourceTree = "<group>"; };
+		94E9194C5B8C6F831DB24731 /* Pods-PearlCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PearlCam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PearlCam/Pods-PearlCam.debug.xcconfig"; sourceTree = "<group>"; };
+		EC368A66AD6D831CBCF171A8 /* Pods_PearlCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PearlCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18BBA8BB1EEBAB8C00BE0090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BBA9381EEBAF9C00BE0090 /* GPUImage.framework in Frameworks */,
+				06530D6038D4923556CE4369 /* Pods_PearlCam.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18BBA8B51EEBAB8C00BE0090 = {
+			isa = PBXGroup;
+			children = (
+				18BBA8C01EEBAB8C00BE0090 /* PearlCam */,
+				18BBA8BF1EEBAB8C00BE0090 /* Products */,
+				3DEE19E51BE3D043A63BE350 /* Pods */,
+				245403E5ADDC025D1D911378 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		18BBA8BF1EEBAB8C00BE0090 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18BBA8BE1EEBAB8C00BE0090 /* PearlCam.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18BBA8C01EEBAB8C00BE0090 /* PearlCam */ = {
+			isa = PBXGroup;
+			children = (
+				18BBA9341EEBAE8F00BE0090 /* ImageUtils.swift */,
+				18BBA9351EEBAE8F00BE0090 /* PushButton.swift */,
+				18BBA9141EEBACF000BE0090 /* PearlFX */,
+				18BBA8E71EEBACD400BE0090 /* PearlCam */,
+				18BBA8D31EEBABC700BE0090 /* GPUImage.xcodeproj */,
+				18BBA8C11EEBAB8C00BE0090 /* AppDelegate.swift */,
+				18BBA8C31EEBAB8C00BE0090 /* ViewController.swift */,
+				18BBA8C51EEBAB8C00BE0090 /* Main.storyboard */,
+				18BBA8C81EEBAB8C00BE0090 /* Assets.xcassets */,
+				18BBA8CA1EEBAB8C00BE0090 /* LaunchScreen.storyboard */,
+				18BBA8CD1EEBAB8C00BE0090 /* Info.plist */,
+			);
+			path = PearlCam;
+			sourceTree = "<group>";
+		};
+		18BBA8D41EEBABC700BE0090 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18BBA8DB1EEBABC800BE0090 /* GPUImage.framework */,
+				18BBA8DD1EEBABC800BE0090 /* GPUImageTests_macOS.xctest */,
+				18BBA8DF1EEBABC800BE0090 /* GPUImage.framework */,
+				18BBA8E11EEBABC800BE0090 /* GPUImageTests_iOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18BBA8E71EEBACD400BE0090 /* PearlCam */ = {
+			isa = PBXGroup;
+			children = (
+				18BBA8E81EEBACD400BE0090 /* CameraController.swift */,
+				18BBA8E91EEBACD400BE0090 /* Components */,
+				18BBA8EE1EEBACD400BE0090 /* Filters */,
+				18BBA8EF1EEBACD400BE0090 /* LUTs */,
+				18BBA8FC1EEBACD400BE0090 /* PearlCamViewController.swift */,
+				18BBA8FD1EEBACD400BE0090 /* PearlCamViewController.xib */,
+				18BBA92D1EEBAD1200BE0090 /* PearlCam.xcassets */,
+			);
+			path = PearlCam;
+			sourceTree = "<group>";
+		};
+		18BBA8E91EEBACD400BE0090 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				18BBA8EA1EEBACD400BE0090 /* CameraUIViewController.swift */,
+				18BBA8EB1EEBACD400BE0090 /* CameraUIViewController.xib */,
+				18BBA8EC1EEBACD400BE0090 /* FatalErrorView.swift */,
+				18BBA8ED1EEBACD400BE0090 /* ViewFinder.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		18BBA8EE1EEBACD400BE0090 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		18BBA8EF1EEBACD400BE0090 /* LUTs */ = {
+			isa = PBXGroup;
+			children = (
+				18BBA8F01EEBACD400BE0090 /* CandleLight.png */,
+				18BBA8F11EEBACD400BE0090 /* ColorPunch.png */,
+				18BBA8F21EEBACD400BE0090 /* ColorPunchCool.png */,
+				18BBA8F31EEBACD400BE0090 /* Earthy.png */,
+				18BBA8F41EEBACD400BE0090 /* FilmStock.png */,
+				18BBA8F51EEBACD400BE0090 /* Intensify.png */,
+				18BBA8F61EEBACD400BE0090 /* Lenox.png */,
+				18BBA8F71EEBACD400BE0090 /* lookup_amatorka.png */,
+				18BBA8F81EEBACD400BE0090 /* lookup_miss_etikate.png */,
+				18BBA8F91EEBACD400BE0090 /* lookup_soft_elegance_2.png */,
+				18BBA8FA1EEBACD400BE0090 /* Red.png */,
+				18BBA8FB1EEBACD400BE0090 /* Remy.png */,
+			);
+			path = LUTs;
+			sourceTree = "<group>";
+		};
+		18BBA9141EEBACF000BE0090 /* PearlFX */ = {
+			isa = PBXGroup;
+			children = (
+				18BBA93C1EEC52EB00BE0090 /* FilterUI */,
+				18BBA9151EEBACF000BE0090 /* Components */,
+				18BBA91B1EEBACF000BE0090 /* Filters */,
+				18BBA91E1EEBACF000BE0090 /* PearlFXViewController.swift */,
+				18BBA91F1EEBACF000BE0090 /* PearlFXViewController.xib */,
+				18BBA9201EEBACF000BE0090 /* test.jpg */,
+				18BBA9211EEBACF000BE0090 /* test2.jpg */,
+			);
+			path = PearlFX;
+			sourceTree = "<group>";
+		};
+		18BBA9151EEBACF000BE0090 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				18BBA9161EEBACF000BE0090 /* ColorPresetThumbnailView.swift */,
+				18BBA9171EEBACF000BE0090 /* FilterManager.swift */,
+				18BBA9181EEBACF000BE0090 /* FilterSelectorView.swift */,
+				18BBA9191EEBACF000BE0090 /* Pipeline.swift */,
+				18BBA91A1EEBACF000BE0090 /* Processor.swift */,
+				18BBA9411EEC550F00BE0090 /* FXSlider.swift */,
+				18BBA9431EEC5CE400BE0090 /* AdjustmentSelectorView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		18BBA91B1EEBACF000BE0090 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				18BBA91C1EEBACF000BE0090 /* ExposureFilterNode.swift */,
+				18BBA91D1EEBACF000BE0090 /* LookupFilterNode.swift */,
+				18BBA9491EEC73AF00BE0090 /* ContrastFilterNode.swift */,
+				18BBA94D1EEC777A00BE0090 /* HighlightShadowFilterNode.swift */,
+				18BBA94F1EEC77FB00BE0090 /* WhitebalanceFilterNode.swift */,
+				18BBA9511EEC789400BE0090 /* VibranceFilterNode.swift */,
+				18BBA9531EEC78F000BE0090 /* SharpenFilterNode.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		18BBA93C1EEC52EB00BE0090 /* FilterUI */ = {
+			isa = PBXGroup;
+			children = (
+				18BBA93D1EEC532800BE0090 /* BrightnessFilterViewController.swift */,
+				18BBA93E1EEC532800BE0090 /* BrightnessFilterViewController.xib */,
+				18BBA9471EEC72B600BE0090 /* AdjustmentUIViewController.swift */,
+				18BBA9551EEC7B9400BE0090 /* LightShadowFilterViewController.swift */,
+				18BBA9561EEC7B9400BE0090 /* LightShadowFilterViewController.xib */,
+			);
+			path = FilterUI;
+			sourceTree = "<group>";
+		};
+		245403E5ADDC025D1D911378 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC368A66AD6D831CBCF171A8 /* Pods_PearlCam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DEE19E51BE3D043A63BE350 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94E9194C5B8C6F831DB24731 /* Pods-PearlCam.debug.xcconfig */,
+				31BC8A65091AB243CCFB51F3 /* Pods-PearlCam.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18BBA8BD1EEBAB8C00BE0090 /* PearlCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BBA8D01EEBAB8C00BE0090 /* Build configuration list for PBXNativeTarget "PearlCam" */;
+			buildPhases = (
+				FF470808347232B6C85E9081 /* [CP] Check Pods Manifest.lock */,
+				18BBA8BA1EEBAB8C00BE0090 /* Sources */,
+				18BBA8BB1EEBAB8C00BE0090 /* Frameworks */,
+				18BBA8BC1EEBAB8C00BE0090 /* Resources */,
+				E8FF6783D5C10352F6C0641F /* [CP] Embed Pods Frameworks */,
+				BA578E9CA99DE8534323D887 /* [CP] Copy Pods Resources */,
+				18BBA9391EEBAFD000BE0090 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18BBA8E31EEBABDC00BE0090 /* PBXTargetDependency */,
+			);
+			name = PearlCam;
+			productName = PearlCam;
+			productReference = 18BBA8BE1EEBAB8C00BE0090 /* PearlCam.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18BBA8B61EEBAB8C00BE0090 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Tiangong You";
+				TargetAttributes = {
+					18BBA8BD1EEBAB8C00BE0090 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 9V3CA3764U;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 18BBA8B91EEBAB8C00BE0090 /* Build configuration list for PBXProject "PearlCam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18BBA8B51EEBAB8C00BE0090;
+			productRefGroup = 18BBA8BF1EEBAB8C00BE0090 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 18BBA8D41EEBABC700BE0090 /* Products */;
+					ProjectRef = 18BBA8D31EEBABC700BE0090 /* GPUImage.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				18BBA8BD1EEBAB8C00BE0090 /* PearlCam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		18BBA8DB1EEBABC800BE0090 /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = 18BBA8DA1EEBABC800BE0090 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		18BBA8DD1EEBABC800BE0090 /* GPUImageTests_macOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GPUImageTests_macOS.xctest;
+			remoteRef = 18BBA8DC1EEBABC800BE0090 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		18BBA8DF1EEBABC800BE0090 /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = 18BBA8DE1EEBABC800BE0090 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		18BBA8E11EEBABC800BE0090 /* GPUImageTests_iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GPUImageTests_iOS.xctest;
+			remoteRef = 18BBA8E01EEBABC800BE0090 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18BBA8BC1EEBAB8C00BE0090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BBA9091EEBACD400BE0090 /* Lenox.png in Resources */,
+				18BBA9041EEBACD400BE0090 /* ColorPunch.png in Resources */,
+				18BBA8CC1EEBAB8C00BE0090 /* LaunchScreen.storyboard in Resources */,
+				18BBA90A1EEBACD400BE0090 /* lookup_amatorka.png in Resources */,
+				18BBA9061EEBACD400BE0090 /* Earthy.png in Resources */,
+				18BBA9001EEBACD400BE0090 /* CameraUIViewController.xib in Resources */,
+				18BBA92C1EEBACF000BE0090 /* test2.jpg in Resources */,
+				18BBA90D1EEBACD400BE0090 /* Red.png in Resources */,
+				18BBA92B1EEBACF000BE0090 /* test.jpg in Resources */,
+				18BBA9051EEBACD400BE0090 /* ColorPunchCool.png in Resources */,
+				18BBA90E1EEBACD400BE0090 /* Remy.png in Resources */,
+				18BBA8C91EEBAB8C00BE0090 /* Assets.xcassets in Resources */,
+				18BBA9071EEBACD400BE0090 /* FilmStock.png in Resources */,
+				18BBA92A1EEBACF000BE0090 /* PearlFXViewController.xib in Resources */,
+				18BBA9081EEBACD400BE0090 /* Intensify.png in Resources */,
+				18BBA92E1EEBAD1200BE0090 /* PearlCam.xcassets in Resources */,
+				18BBA90C1EEBACD400BE0090 /* lookup_soft_elegance_2.png in Resources */,
+				18BBA90B1EEBACD400BE0090 /* lookup_miss_etikate.png in Resources */,
+				18BBA9031EEBACD400BE0090 /* CandleLight.png in Resources */,
+				18BBA9581EEC7B9400BE0090 /* LightShadowFilterViewController.xib in Resources */,
+				18BBA9401EEC532800BE0090 /* BrightnessFilterViewController.xib in Resources */,
+				18BBA8C71EEBAB8C00BE0090 /* Main.storyboard in Resources */,
+				18BBA9101EEBACD400BE0090 /* PearlCamViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA578E9CA99DE8534323D887 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PearlCam/Pods-PearlCam-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8FF6783D5C10352F6C0641F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PearlCam/Pods-PearlCam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF470808347232B6C85E9081 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18BBA8BA1EEBAB8C00BE0090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BBA9021EEBACD400BE0090 /* ViewFinder.swift in Sources */,
+				18BBA8FE1EEBACD400BE0090 /* CameraController.swift in Sources */,
+				18BBA94E1EEC777A00BE0090 /* HighlightShadowFilterNode.swift in Sources */,
+				18BBA9221EEBACF000BE0090 /* ColorPresetThumbnailView.swift in Sources */,
+				18BBA9281EEBACF000BE0090 /* LookupFilterNode.swift in Sources */,
+				18BBA9271EEBACF000BE0090 /* ExposureFilterNode.swift in Sources */,
+				18BBA9571EEC7B9400BE0090 /* LightShadowFilterViewController.swift in Sources */,
+				18BBA9371EEBAE8F00BE0090 /* PushButton.swift in Sources */,
+				18BBA9441EEC5CE400BE0090 /* AdjustmentSelectorView.swift in Sources */,
+				18BBA9241EEBACF000BE0090 /* FilterSelectorView.swift in Sources */,
+				18BBA8FF1EEBACD400BE0090 /* CameraUIViewController.swift in Sources */,
+				18BBA94A1EEC73AF00BE0090 /* ContrastFilterNode.swift in Sources */,
+				18BBA90F1EEBACD400BE0090 /* PearlCamViewController.swift in Sources */,
+				18BBA93F1EEC532800BE0090 /* BrightnessFilterViewController.swift in Sources */,
+				18BBA9521EEC789400BE0090 /* VibranceFilterNode.swift in Sources */,
+				18BBA9261EEBACF000BE0090 /* Processor.swift in Sources */,
+				18BBA9481EEC72B600BE0090 /* AdjustmentUIViewController.swift in Sources */,
+				18BBA9231EEBACF000BE0090 /* FilterManager.swift in Sources */,
+				18BBA8C41EEBAB8C00BE0090 /* ViewController.swift in Sources */,
+				18BBA9011EEBACD400BE0090 /* FatalErrorView.swift in Sources */,
+				18BBA9501EEC77FB00BE0090 /* WhitebalanceFilterNode.swift in Sources */,
+				18BBA8C21EEBAB8C00BE0090 /* AppDelegate.swift in Sources */,
+				18BBA9421EEC550F00BE0090 /* FXSlider.swift in Sources */,
+				18BBA9291EEBACF000BE0090 /* PearlFXViewController.swift in Sources */,
+				18BBA9251EEBACF000BE0090 /* Pipeline.swift in Sources */,
+				18BBA9361EEBAE8F00BE0090 /* ImageUtils.swift in Sources */,
+				18BBA9541EEC78F000BE0090 /* SharpenFilterNode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18BBA8E31EEBABDC00BE0090 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImage_iOS;
+			targetProxy = 18BBA8E21EEBABDC00BE0090 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18BBA8C51EEBAB8C00BE0090 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18BBA8C61EEBAB8C00BE0090 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18BBA8CA1EEBAB8C00BE0090 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18BBA8CB1EEBAB8C00BE0090 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18BBA8CE1EEBAB8C00BE0090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18BBA8CF1EEBAB8C00BE0090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18BBA8D11EEBAB8C00BE0090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94E9194C5B8C6F831DB24731 /* Pods-PearlCam.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9V3CA3764U;
+				INFOPLIST_FILE = PearlCam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.delphi.you.PearlCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		18BBA8D21EEBAB8C00BE0090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31BC8A65091AB243CCFB51F3 /* Pods-PearlCam.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9V3CA3764U;
+				INFOPLIST_FILE = PearlCam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.delphi.you.PearlCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18BBA8B91EEBAB8C00BE0090 /* Build configuration list for PBXProject "PearlCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BBA8CE1EEBAB8C00BE0090 /* Debug */,
+				18BBA8CF1EEBAB8C00BE0090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18BBA8D01EEBAB8C00BE0090 /* Build configuration list for PBXNativeTarget "PearlCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BBA8D11EEBAB8C00BE0090 /* Debug */,
+				18BBA8D21EEBAB8C00BE0090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18BBA8B61EEBAB8C00BE0090 /* Project object */;
+}

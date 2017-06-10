@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LightShadowFilterViewController" customModule="PearlCam" customModuleProvider="target">
+            <connections>
+                <outlet property="highlightSlider" destination="vb7-ad-kqE" id="NES-0M-Yu0"/>
+                <outlet property="shadowSlider" destination="TOW-Yr-ymt" id="Wis-kN-5dw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="516" height="438"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FilterPanelBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Ad9-he-8ZP">
+                    <rect key="frame" x="0.0" y="238" width="516" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="IPy-8Z-2pf"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHADOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHe-Xg-JnZ">
+                    <rect key="frame" x="31" y="361" width="61.666666666666671" height="25"/>
+                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.0" alpha="0.26784567640000001" colorSpace="calibratedWhite"/>
+                    <size key="shadowOffset" width="0.0" height="1"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGHTLIGHT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvv-Ag-f2x">
+                    <rect key="frame" x="31" y="283" width="82" height="25"/>
+                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.0" alpha="0.26784567640000001" colorSpace="calibratedWhite"/>
+                    <size key="shadowOffset" width="0.0" height="1"/>
+                </label>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="TOW-Yr-ymt" userLabel="contrastSlider" customClass="FXSlider" customModule="PearlCam" customModuleProvider="target">
+                    <rect key="frame" x="17" y="389" width="480" height="31"/>
+                    <connections>
+                        <action selector="shadowValueDidChange:" destination="-1" eventType="valueChanged" id="Ont-uo-rHs"/>
+                    </connections>
+                </slider>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vb7-ad-kqE" userLabel="brightnessSlider" customClass="FXSlider" customModule="PearlCam" customModuleProvider="target">
+                    <rect key="frame" x="18" y="317" width="480" height="31"/>
+                    <connections>
+                        <action selector="highlightValueDidChange:" destination="-1" eventType="valueChanged" id="RCY-0C-DPJ"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="GHe-Xg-JnZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="31" id="3mx-yO-NuL"/>
+                <constraint firstItem="Ad9-he-8ZP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6Zh-99-JrA"/>
+                <constraint firstAttribute="bottom" secondItem="TOW-Yr-ymt" secondAttribute="bottom" constant="19" id="Bf1-rT-BH9"/>
+                <constraint firstAttribute="trailing" secondItem="TOW-Yr-ymt" secondAttribute="trailing" constant="21" id="OWs-14-auD"/>
+                <constraint firstItem="vb7-ad-kqE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="jbW-Q0-J7T"/>
+                <constraint firstAttribute="bottom" secondItem="vb7-ad-kqE" secondAttribute="bottom" constant="91" id="ljl-68-9vC"/>
+                <constraint firstAttribute="trailing" secondItem="Ad9-he-8ZP" secondAttribute="trailing" id="pbQ-Mu-OsV"/>
+                <constraint firstAttribute="bottom" secondItem="nvv-Ag-f2x" secondAttribute="bottom" constant="130" id="raM-bA-Gf7"/>
+                <constraint firstAttribute="bottom" secondItem="Ad9-he-8ZP" secondAttribute="bottom" id="sWW-67-rJw"/>
+                <constraint firstAttribute="trailing" secondItem="vb7-ad-kqE" secondAttribute="trailing" constant="20" id="sfH-qr-zDd"/>
+                <constraint firstAttribute="bottom" secondItem="GHe-Xg-JnZ" secondAttribute="bottom" constant="52" id="skD-FC-8lZ"/>
+                <constraint firstItem="TOW-Yr-ymt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="19" id="weq-hF-bqQ"/>
+                <constraint firstItem="nvv-Ag-f2x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="31" id="ycx-pv-fqW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="96" y="-63"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="FilterPanelBackground" width="414" height="156"/>
+    </resources>
+</document>

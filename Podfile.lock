@@ -1,0 +1,12 @@
+PODS:
+  - CRRulerControl (1.0.0)
+
+DEPENDENCIES:
+  - CRRulerControl
+
+SPEC CHECKSUMS:
+  CRRulerControl: b0517d3fe616dc63ad3daedfa37d056c959d877a
+
+PODFILE CHECKSUM: f67d95ea83976b89aa27e33964daef42b8376f78
+
+COCOAPODS: 1.1.0.rc.2
