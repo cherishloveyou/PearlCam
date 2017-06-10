@@ -216,13 +216,33 @@ class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, Adjus
     
     // MARK: - AdjustmentSelectorDelegate
     
-    func didRequestBrightnessFilterUI() {
+    func didRequestExposureFilterUI() {
+        if currentAdjustmentUI != nil && currentAdjustmentUI! is BrightnessFilterViewController {
+            dismissCurrentAdjustmentUI(nil)
+            return
+        }
+        
         let panel = BrightnessFilterViewController(filterManager)
         presentAdjustmentUI(panel)
     }
 
-    func didRequestHighlightShadowFilterUI() {
-        let panel = LightShadowFilterViewController(filterManager)
+    func didRequestWhiteBalanceFilterUI() {
+        if currentAdjustmentUI != nil && currentAdjustmentUI! is WhiteBalanceFilterViewController {
+            dismissCurrentAdjustmentUI(nil)
+            return
+        }
+        
+        let panel = WhiteBalanceFilterViewController(filterManager)
+        presentAdjustmentUI(panel)
+    }
+    
+    func didRequestMonochromeFilterUI() {
+        if currentAdjustmentUI != nil && currentAdjustmentUI! is MonochromeFilterViewController {
+            dismissCurrentAdjustmentUI(nil)
+            return
+        }
+        
+        let panel = MonochromeFilterViewController(filterManager)
         presentAdjustmentUI(panel)
     }
     

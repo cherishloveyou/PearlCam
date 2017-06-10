@@ -11,8 +11,9 @@
 import UIKit
 
 protocol AdjustmentSelectorDelegate : NSObjectProtocol {
-    func didRequestBrightnessFilterUI()
-    func didRequestHighlightShadowFilterUI()
+    func didRequestExposureFilterUI()
+    func didRequestWhiteBalanceFilterUI()
+    func didRequestMonochromeFilterUI()
 }
 
 class AdjustmentSelectorView: UIView {
@@ -23,11 +24,11 @@ class AdjustmentSelectorView: UIView {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
 
-    private var brightnessFilterButton : UIButton!
     private var exposureFilterButton : UIButton!
     private var colorFilterButton : UIButton!
     private var whiteBalanceFilterButton : UIButton!
     private var fxFilterButton : UIButton!
+    private var monoFilterButton : UIButton!
     private var buttons = [UIButton]()
 
     weak var delegate : AdjustmentSelectorDelegate?
@@ -47,20 +48,21 @@ class AdjustmentSelectorView: UIView {
         scrollView.addSubview(contentView)
 
         // Create filter buttons
-        brightnessFilterButton = createFilterButton("BrightnessFilterIcon")
         exposureFilterButton = createFilterButton("ExposureFilterIcon")
-        colorFilterButton = createFilterButton("ColorFilterIcon")
         whiteBalanceFilterButton = createFilterButton("WhiteBalanceFilterIcon")
+        colorFilterButton = createFilterButton("ColorFilterIcon")
+        monoFilterButton = createFilterButton("MonochromeFilterIcon")
         fxFilterButton = createFilterButton("FXFilterIcon")
-        buttons = [brightnessFilterButton, exposureFilterButton, colorFilterButton, whiteBalanceFilterButton, fxFilterButton]
+        buttons = [exposureFilterButton, whiteBalanceFilterButton, colorFilterButton, monoFilterButton, fxFilterButton]
         
         for button in buttons {
             contentView.addSubview(button)
         }
         
         // Events
-        brightnessFilterButton.addTarget(self, action: #selector(brightnessButtonDidTap(_:)), for: .touchUpInside)
-        exposureFilterButton.addTarget(self, action: #selector(highlightShadowButtonDidTap(_:)), for: .touchUpInside)
+        exposureFilterButton.addTarget(self, action: #selector(exposureButtonDidTap(_:)), for: .touchUpInside)
+        whiteBalanceFilterButton.addTarget(self, action: #selector(whiteBalanceButtonDidTap(_:)), for: .touchUpInside)
+        monoFilterButton.addTarget(self, action: #selector(monoButtonDidTap(_:)), for: .touchUpInside)
     }
     
     private func createFilterButton(_ icon : String) -> UIButton {
@@ -91,11 +93,16 @@ class AdjustmentSelectorView: UIView {
         scrollView.contentSize = CGSize(width: contentWidth, height: self.bounds.height)
     }
     
-    @objc private func brightnessButtonDidTap(_ sender : UIButton) {
-        delegate?.didRequestBrightnessFilterUI()
+    @objc private func exposureButtonDidTap(_ sender : UIButton) {
+        delegate?.didRequestExposureFilterUI()
     }
-    
-    @objc private func highlightShadowButtonDidTap(_ sender : UIButton) {
-        delegate?.didRequestHighlightShadowFilterUI()
+
+    @objc private func whiteBalanceButtonDidTap(_ sender : UIButton) {
+        delegate?.didRequestWhiteBalanceFilterUI()
     }
+
+    @objc private func monoButtonDidTap(_ sender : UIButton) {
+        delegate?.didRequestMonochromeFilterUI()
+    }
+
 }

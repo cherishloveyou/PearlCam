@@ -54,12 +54,14 @@
 		18BBA9441EEC5CE400BE0090 /* AdjustmentSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9431EEC5CE400BE0090 /* AdjustmentSelectorView.swift */; };
 		18BBA9481EEC72B600BE0090 /* AdjustmentUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9471EEC72B600BE0090 /* AdjustmentUIViewController.swift */; };
 		18BBA94A1EEC73AF00BE0090 /* ContrastFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9491EEC73AF00BE0090 /* ContrastFilterNode.swift */; };
-		18BBA94E1EEC777A00BE0090 /* HighlightShadowFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA94D1EEC777A00BE0090 /* HighlightShadowFilterNode.swift */; };
 		18BBA9501EEC77FB00BE0090 /* WhitebalanceFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA94F1EEC77FB00BE0090 /* WhitebalanceFilterNode.swift */; };
 		18BBA9521EEC789400BE0090 /* VibranceFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9511EEC789400BE0090 /* VibranceFilterNode.swift */; };
 		18BBA9541EEC78F000BE0090 /* SharpenFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9531EEC78F000BE0090 /* SharpenFilterNode.swift */; };
-		18BBA9571EEC7B9400BE0090 /* LightShadowFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9551EEC7B9400BE0090 /* LightShadowFilterViewController.swift */; };
-		18BBA9581EEC7B9400BE0090 /* LightShadowFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA9561EEC7B9400BE0090 /* LightShadowFilterViewController.xib */; };
+		18BBA95F1EEC896200BE0090 /* WhiteBalanceFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA95D1EEC896200BE0090 /* WhiteBalanceFilterViewController.swift */; };
+		18BBA9601EEC896200BE0090 /* WhiteBalanceFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA95E1EEC896200BE0090 /* WhiteBalanceFilterViewController.xib */; };
+		18BBA9621EEC8F1200BE0090 /* MonochromeFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9611EEC8F1200BE0090 /* MonochromeFilterNode.swift */; };
+		18BBA9651EEC901600BE0090 /* MonochromeFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9631EEC901600BE0090 /* MonochromeFilterViewController.swift */; };
+		18BBA9661EEC901600BE0090 /* MonochromeFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA9641EEC901600BE0090 /* MonochromeFilterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,12 +163,14 @@
 		18BBA9431EEC5CE400BE0090 /* AdjustmentSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjustmentSelectorView.swift; sourceTree = "<group>"; };
 		18BBA9471EEC72B600BE0090 /* AdjustmentUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjustmentUIViewController.swift; sourceTree = "<group>"; };
 		18BBA9491EEC73AF00BE0090 /* ContrastFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContrastFilterNode.swift; sourceTree = "<group>"; };
-		18BBA94D1EEC777A00BE0090 /* HighlightShadowFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightShadowFilterNode.swift; sourceTree = "<group>"; };
 		18BBA94F1EEC77FB00BE0090 /* WhitebalanceFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhitebalanceFilterNode.swift; sourceTree = "<group>"; };
 		18BBA9511EEC789400BE0090 /* VibranceFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibranceFilterNode.swift; sourceTree = "<group>"; };
 		18BBA9531EEC78F000BE0090 /* SharpenFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharpenFilterNode.swift; sourceTree = "<group>"; };
-		18BBA9551EEC7B9400BE0090 /* LightShadowFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightShadowFilterViewController.swift; sourceTree = "<group>"; };
-		18BBA9561EEC7B9400BE0090 /* LightShadowFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightShadowFilterViewController.xib; sourceTree = "<group>"; };
+		18BBA95D1EEC896200BE0090 /* WhiteBalanceFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteBalanceFilterViewController.swift; sourceTree = "<group>"; };
+		18BBA95E1EEC896200BE0090 /* WhiteBalanceFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhiteBalanceFilterViewController.xib; sourceTree = "<group>"; };
+		18BBA9611EEC8F1200BE0090 /* MonochromeFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonochromeFilterNode.swift; sourceTree = "<group>"; };
+		18BBA9631EEC901600BE0090 /* MonochromeFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonochromeFilterViewController.swift; sourceTree = "<group>"; };
+		18BBA9641EEC901600BE0090 /* MonochromeFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonochromeFilterViewController.xib; sourceTree = "<group>"; };
 		31BC8A65091AB243CCFB51F3 /* Pods-PearlCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PearlCam.release.xcconfig"; path = "Pods/Target Support Files/Pods-PearlCam/Pods-PearlCam.release.xcconfig"; sourceTree = "<group>"; };
 		94E9194C5B8C6F831DB24731 /* Pods-PearlCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PearlCam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PearlCam/Pods-PearlCam.debug.xcconfig"; sourceTree = "<group>"; };
 		EC368A66AD6D831CBCF171A8 /* Pods_PearlCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PearlCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,10 +321,10 @@
 				18BBA91C1EEBACF000BE0090 /* ExposureFilterNode.swift */,
 				18BBA91D1EEBACF000BE0090 /* LookupFilterNode.swift */,
 				18BBA9491EEC73AF00BE0090 /* ContrastFilterNode.swift */,
-				18BBA94D1EEC777A00BE0090 /* HighlightShadowFilterNode.swift */,
 				18BBA94F1EEC77FB00BE0090 /* WhitebalanceFilterNode.swift */,
 				18BBA9511EEC789400BE0090 /* VibranceFilterNode.swift */,
 				18BBA9531EEC78F000BE0090 /* SharpenFilterNode.swift */,
+				18BBA9611EEC8F1200BE0090 /* MonochromeFilterNode.swift */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -331,8 +335,10 @@
 				18BBA93D1EEC532800BE0090 /* BrightnessFilterViewController.swift */,
 				18BBA93E1EEC532800BE0090 /* BrightnessFilterViewController.xib */,
 				18BBA9471EEC72B600BE0090 /* AdjustmentUIViewController.swift */,
-				18BBA9551EEC7B9400BE0090 /* LightShadowFilterViewController.swift */,
-				18BBA9561EEC7B9400BE0090 /* LightShadowFilterViewController.xib */,
+				18BBA95D1EEC896200BE0090 /* WhiteBalanceFilterViewController.swift */,
+				18BBA95E1EEC896200BE0090 /* WhiteBalanceFilterViewController.xib */,
+				18BBA9631EEC901600BE0090 /* MonochromeFilterViewController.swift */,
+				18BBA9641EEC901600BE0090 /* MonochromeFilterViewController.xib */,
 			);
 			path = FilterUI;
 			sourceTree = "<group>";
@@ -462,6 +468,7 @@
 				18BBA90A1EEBACD400BE0090 /* lookup_amatorka.png in Resources */,
 				18BBA9061EEBACD400BE0090 /* Earthy.png in Resources */,
 				18BBA9001EEBACD400BE0090 /* CameraUIViewController.xib in Resources */,
+				18BBA9601EEC896200BE0090 /* WhiteBalanceFilterViewController.xib in Resources */,
 				18BBA92C1EEBACF000BE0090 /* test2.jpg in Resources */,
 				18BBA90D1EEBACD400BE0090 /* Red.png in Resources */,
 				18BBA92B1EEBACF000BE0090 /* test.jpg in Resources */,
@@ -474,8 +481,8 @@
 				18BBA92E1EEBAD1200BE0090 /* PearlCam.xcassets in Resources */,
 				18BBA90C1EEBACD400BE0090 /* lookup_soft_elegance_2.png in Resources */,
 				18BBA90B1EEBACD400BE0090 /* lookup_miss_etikate.png in Resources */,
+				18BBA9661EEC901600BE0090 /* MonochromeFilterViewController.xib in Resources */,
 				18BBA9031EEBACD400BE0090 /* CandleLight.png in Resources */,
-				18BBA9581EEC7B9400BE0090 /* LightShadowFilterViewController.xib in Resources */,
 				18BBA9401EEC532800BE0090 /* BrightnessFilterViewController.xib in Resources */,
 				18BBA8C71EEBAB8C00BE0090 /* Main.storyboard in Resources */,
 				18BBA9101EEBACD400BE0090 /* PearlCamViewController.xib in Resources */,
@@ -539,11 +546,11 @@
 			files = (
 				18BBA9021EEBACD400BE0090 /* ViewFinder.swift in Sources */,
 				18BBA8FE1EEBACD400BE0090 /* CameraController.swift in Sources */,
-				18BBA94E1EEC777A00BE0090 /* HighlightShadowFilterNode.swift in Sources */,
 				18BBA9221EEBACF000BE0090 /* ColorPresetThumbnailView.swift in Sources */,
 				18BBA9281EEBACF000BE0090 /* LookupFilterNode.swift in Sources */,
 				18BBA9271EEBACF000BE0090 /* ExposureFilterNode.swift in Sources */,
-				18BBA9571EEC7B9400BE0090 /* LightShadowFilterViewController.swift in Sources */,
+				18BBA95F1EEC896200BE0090 /* WhiteBalanceFilterViewController.swift in Sources */,
+				18BBA9621EEC8F1200BE0090 /* MonochromeFilterNode.swift in Sources */,
 				18BBA9371EEBAE8F00BE0090 /* PushButton.swift in Sources */,
 				18BBA9441EEC5CE400BE0090 /* AdjustmentSelectorView.swift in Sources */,
 				18BBA9241EEBACF000BE0090 /* FilterSelectorView.swift in Sources */,
@@ -564,6 +571,7 @@
 				18BBA9251EEBACF000BE0090 /* Pipeline.swift in Sources */,
 				18BBA9361EEBAE8F00BE0090 /* ImageUtils.swift in Sources */,
 				18BBA9541EEC78F000BE0090 /* SharpenFilterNode.swift in Sources */,
+				18BBA9651EEC901600BE0090 /* MonochromeFilterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

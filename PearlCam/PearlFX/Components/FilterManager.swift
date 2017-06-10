@@ -34,7 +34,8 @@ class FilterManager: NSObject {
     private var exposureNode = ExposureFilterNode()
     private var contrastNode = ContrastFilterNode()
     private var vibranceNode = VibranceFilterNode()
-    private var highlightShadowNode = HighlightShadowFilterNode()
+    private var wbNode = WhitebalanceFilterNode()
+    private var monochromeFilterNode = MonochromeFilterNode()
     
     // Filter pipelines
     private var previewPipeline : Pipeline!
@@ -82,16 +83,31 @@ class FilterManager: NSObject {
         }
     }
     
-    var highlight : Float? = 1 {
+    var temperature : Float = 5000 {
         didSet {
-            highlightShadowNode.highlight = highlight
+            wbNode.temperature = temperature
             renderPreview()
         }
     }
     
-    var shadow : Float? = 0 {
+    var tint : Float = 0 {
         didSet {
-            highlightShadowNode.shadow = shadow
+            wbNode.tint = tint
+            renderPreview()
+        }
+    }
+    
+    var enableMonochrome : Bool = false {
+        didSet {
+            monochromeFilterNode.enabled = enableMonochrome
+            previewPipeline.invalidate()
+            renderPreview()
+        }
+    }
+    
+    var monochromeIntensity : Float = 0.7 {
+        didSet {
+            monochromeFilterNode.intensity = monochromeIntensity
             renderPreview()
         }
     }
@@ -113,11 +129,12 @@ class FilterManager: NSObject {
         
         // Preview pipeline
         previewPipeline.addNode(inputNode)
+        previewPipeline.addNode(wbNode)
         previewPipeline.addNode(exposureNode)
-        previewPipeline.addNode(highlightShadowNode)
         previewPipeline.addNode(contrastNode)
         previewPipeline.addNode(vibranceNode)
         previewPipeline.addNode(lookupNode)
+        previewPipeline.addNode(monochromeFilterNode)
         previewPipeline.addNode(outputNode)
     }
     
