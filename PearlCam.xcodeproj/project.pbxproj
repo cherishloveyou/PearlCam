@@ -62,6 +62,12 @@
 		18BBA9621EEC8F1200BE0090 /* MonochromeFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9611EEC8F1200BE0090 /* MonochromeFilterNode.swift */; };
 		18BBA9651EEC901600BE0090 /* MonochromeFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9631EEC901600BE0090 /* MonochromeFilterViewController.swift */; };
 		18BBA9661EEC901600BE0090 /* MonochromeFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA9641EEC901600BE0090 /* MonochromeFilterViewController.xib */; };
+		18BBA9681EECC06300BE0090 /* ColorFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9671EECC06300BE0090 /* ColorFilterNode.swift */; };
+		18BBA96A1EECC0F000BE0090 /* VignetteFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9691EECC0F000BE0090 /* VignetteFilterNode.swift */; };
+		18BBA96D1EECC52F00BE0090 /* VignetteFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA96B1EECC52F00BE0090 /* VignetteFilterViewController.swift */; };
+		18BBA96E1EECC52F00BE0090 /* VignetteFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA96C1EECC52F00BE0090 /* VignetteFilterViewController.xib */; };
+		18BBA9711EECC6D400BE0090 /* ColorFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA96F1EECC6D400BE0090 /* ColorFilterViewController.swift */; };
+		18BBA9721EECC6D400BE0090 /* ColorFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA9701EECC6D400BE0090 /* ColorFilterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +177,12 @@
 		18BBA9611EEC8F1200BE0090 /* MonochromeFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonochromeFilterNode.swift; sourceTree = "<group>"; };
 		18BBA9631EEC901600BE0090 /* MonochromeFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonochromeFilterViewController.swift; sourceTree = "<group>"; };
 		18BBA9641EEC901600BE0090 /* MonochromeFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonochromeFilterViewController.xib; sourceTree = "<group>"; };
+		18BBA9671EECC06300BE0090 /* ColorFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFilterNode.swift; sourceTree = "<group>"; };
+		18BBA9691EECC0F000BE0090 /* VignetteFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VignetteFilterNode.swift; sourceTree = "<group>"; };
+		18BBA96B1EECC52F00BE0090 /* VignetteFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VignetteFilterViewController.swift; sourceTree = "<group>"; };
+		18BBA96C1EECC52F00BE0090 /* VignetteFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VignetteFilterViewController.xib; sourceTree = "<group>"; };
+		18BBA96F1EECC6D400BE0090 /* ColorFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFilterViewController.swift; sourceTree = "<group>"; };
+		18BBA9701EECC6D400BE0090 /* ColorFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorFilterViewController.xib; sourceTree = "<group>"; };
 		31BC8A65091AB243CCFB51F3 /* Pods-PearlCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PearlCam.release.xcconfig"; path = "Pods/Target Support Files/Pods-PearlCam/Pods-PearlCam.release.xcconfig"; sourceTree = "<group>"; };
 		94E9194C5B8C6F831DB24731 /* Pods-PearlCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PearlCam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PearlCam/Pods-PearlCam.debug.xcconfig"; sourceTree = "<group>"; };
 		EC368A66AD6D831CBCF171A8 /* Pods_PearlCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PearlCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -325,6 +337,8 @@
 				18BBA9511EEC789400BE0090 /* VibranceFilterNode.swift */,
 				18BBA9531EEC78F000BE0090 /* SharpenFilterNode.swift */,
 				18BBA9611EEC8F1200BE0090 /* MonochromeFilterNode.swift */,
+				18BBA9671EECC06300BE0090 /* ColorFilterNode.swift */,
+				18BBA9691EECC0F000BE0090 /* VignetteFilterNode.swift */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -339,6 +353,10 @@
 				18BBA95E1EEC896200BE0090 /* WhiteBalanceFilterViewController.xib */,
 				18BBA9631EEC901600BE0090 /* MonochromeFilterViewController.swift */,
 				18BBA9641EEC901600BE0090 /* MonochromeFilterViewController.xib */,
+				18BBA96B1EECC52F00BE0090 /* VignetteFilterViewController.swift */,
+				18BBA96C1EECC52F00BE0090 /* VignetteFilterViewController.xib */,
+				18BBA96F1EECC6D400BE0090 /* ColorFilterViewController.swift */,
+				18BBA9701EECC6D400BE0090 /* ColorFilterViewController.xib */,
 			);
 			path = FilterUI;
 			sourceTree = "<group>";
@@ -468,7 +486,9 @@
 				18BBA90A1EEBACD400BE0090 /* lookup_amatorka.png in Resources */,
 				18BBA9061EEBACD400BE0090 /* Earthy.png in Resources */,
 				18BBA9001EEBACD400BE0090 /* CameraUIViewController.xib in Resources */,
+				18BBA96E1EECC52F00BE0090 /* VignetteFilterViewController.xib in Resources */,
 				18BBA9601EEC896200BE0090 /* WhiteBalanceFilterViewController.xib in Resources */,
+				18BBA9721EECC6D400BE0090 /* ColorFilterViewController.xib in Resources */,
 				18BBA92C1EEBACF000BE0090 /* test2.jpg in Resources */,
 				18BBA90D1EEBACD400BE0090 /* Red.png in Resources */,
 				18BBA92B1EEBACF000BE0090 /* test.jpg in Resources */,
@@ -559,6 +579,7 @@
 				18BBA90F1EEBACD400BE0090 /* PearlCamViewController.swift in Sources */,
 				18BBA93F1EEC532800BE0090 /* BrightnessFilterViewController.swift in Sources */,
 				18BBA9521EEC789400BE0090 /* VibranceFilterNode.swift in Sources */,
+				18BBA96A1EECC0F000BE0090 /* VignetteFilterNode.swift in Sources */,
 				18BBA9261EEBACF000BE0090 /* Processor.swift in Sources */,
 				18BBA9481EEC72B600BE0090 /* AdjustmentUIViewController.swift in Sources */,
 				18BBA9231EEBACF000BE0090 /* FilterManager.swift in Sources */,
@@ -569,8 +590,11 @@
 				18BBA9421EEC550F00BE0090 /* FXSlider.swift in Sources */,
 				18BBA9291EEBACF000BE0090 /* PearlFXViewController.swift in Sources */,
 				18BBA9251EEBACF000BE0090 /* Pipeline.swift in Sources */,
+				18BBA96D1EECC52F00BE0090 /* VignetteFilterViewController.swift in Sources */,
+				18BBA9681EECC06300BE0090 /* ColorFilterNode.swift in Sources */,
 				18BBA9361EEBAE8F00BE0090 /* ImageUtils.swift in Sources */,
 				18BBA9541EEC78F000BE0090 /* SharpenFilterNode.swift in Sources */,
+				18BBA9711EECC6D400BE0090 /* ColorFilterViewController.swift in Sources */,
 				18BBA9651EEC901600BE0090 /* MonochromeFilterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

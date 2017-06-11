@@ -14,6 +14,8 @@ protocol AdjustmentSelectorDelegate : NSObjectProtocol {
     func didRequestExposureFilterUI()
     func didRequestWhiteBalanceFilterUI()
     func didRequestMonochromeFilterUI()
+    func didRequestVignetteFilterUI()
+    func didRequestColorFilterUI()
 }
 
 class AdjustmentSelectorView: UIView {
@@ -27,7 +29,7 @@ class AdjustmentSelectorView: UIView {
     private var exposureFilterButton : UIButton!
     private var colorFilterButton : UIButton!
     private var whiteBalanceFilterButton : UIButton!
-    private var fxFilterButton : UIButton!
+    private var vignetteFilterButton : UIButton!
     private var monoFilterButton : UIButton!
     private var buttons = [UIButton]()
 
@@ -52,8 +54,8 @@ class AdjustmentSelectorView: UIView {
         whiteBalanceFilterButton = createFilterButton("WhiteBalanceFilterIcon")
         colorFilterButton = createFilterButton("ColorFilterIcon")
         monoFilterButton = createFilterButton("MonochromeFilterIcon")
-        fxFilterButton = createFilterButton("FXFilterIcon")
-        buttons = [exposureFilterButton, whiteBalanceFilterButton, colorFilterButton, monoFilterButton, fxFilterButton]
+        vignetteFilterButton = createFilterButton("FXFilterIcon")
+        buttons = [exposureFilterButton, whiteBalanceFilterButton, colorFilterButton, monoFilterButton, vignetteFilterButton]
         
         for button in buttons {
             contentView.addSubview(button)
@@ -63,6 +65,8 @@ class AdjustmentSelectorView: UIView {
         exposureFilterButton.addTarget(self, action: #selector(exposureButtonDidTap(_:)), for: .touchUpInside)
         whiteBalanceFilterButton.addTarget(self, action: #selector(whiteBalanceButtonDidTap(_:)), for: .touchUpInside)
         monoFilterButton.addTarget(self, action: #selector(monoButtonDidTap(_:)), for: .touchUpInside)
+        colorFilterButton.addTarget(self, action: #selector(colorButtonDidTap(_:)), for: .touchUpInside)
+        vignetteFilterButton.addTarget(self, action: #selector(vignetteButtonDidTap(_:)), for: .touchUpInside)
     }
     
     private func createFilterButton(_ icon : String) -> UIButton {
@@ -105,4 +109,11 @@ class AdjustmentSelectorView: UIView {
         delegate?.didRequestMonochromeFilterUI()
     }
 
+    @objc private func colorButtonDidTap(_ sender : UIButton) {
+        delegate?.didRequestColorFilterUI()
+    }
+    
+    @objc private func vignetteButtonDidTap(_ sender : UIButton) {
+        delegate?.didRequestVignetteFilterUI()
+    }
 }

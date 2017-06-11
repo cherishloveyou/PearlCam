@@ -40,14 +40,13 @@
                         </label>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XG9-8Z-euW">
                             <rect key="frame" x="123.66666666666666" y="0.0" width="51" height="31"/>
-                            <color key="onTintColor" red="0.87920783668507219" green="0.95429489213197971" blue="0.33240580337277981" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="enabledStateDidChange:" destination="-1" eventType="valueChanged" id="bUu-Xt-dpY"/>
                             </connections>
                         </switch>
                     </subviews>
                 </stackView>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.69999999999999996" minValue="0.40000000000000002" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4WO-Mc-ahT" userLabel="tintSlider" customClass="FXSlider" customModule="PearlCam" customModuleProvider="target">
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.40000000000000002" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4WO-Mc-ahT" userLabel="tintSlider" customClass="FXSlider" customModule="PearlCam" customModuleProvider="target">
                     <rect key="frame" x="18" y="250" width="480" height="31"/>
                     <connections>
                         <action selector="intensityValueDidChange:" destination="-1" eventType="valueChanged" id="2sk-HX-qAO"/>

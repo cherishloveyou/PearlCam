@@ -48,12 +48,15 @@
                     <state key="normal" title="EDIT">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="editButtonDidTap:" destination="-1" eventType="touchUpInside" id="pqG-1d-X0p"/>
+                    </connections>
                 </button>
                 <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUv-fE-s8x" userLabel="previewView" customClass="RenderView" customModule="GPUImage">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="582"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WeS-ZG-7FV" userLabel="Adjustment Selector View" customClass="AdjustmentSelectorView" customModule="PearlCam" customModuleProvider="target">
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WeS-ZG-7FV" userLabel="Adjustment Selector View" customClass="AdjustmentSelectorView" customModule="PearlCam" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="527" width="414" height="55"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>

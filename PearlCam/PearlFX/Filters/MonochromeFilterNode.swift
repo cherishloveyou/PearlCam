@@ -16,7 +16,7 @@ class MonochromeFilterNode: FilterNode {
     init() {
         super.init(filter: monoFilter)
         enabled = false
-        monoFilter.color = Color.black
+        monoFilter.color = Color(red: 0.5, green: 0.5, blue: 0.5)
     }
     
     var intensity : Float? {

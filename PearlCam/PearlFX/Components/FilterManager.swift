@@ -36,6 +36,8 @@ class FilterManager: NSObject {
     private var vibranceNode = VibranceFilterNode()
     private var wbNode = WhitebalanceFilterNode()
     private var monochromeFilterNode = MonochromeFilterNode()
+    private var vignetteFilterNode = VignetteFilterNode()
+    private var colorFilterNode = ColorFilterNode()
     
     // Filter pipelines
     private var previewPipeline : Pipeline!
@@ -105,13 +107,49 @@ class FilterManager: NSObject {
         }
     }
     
-    var monochromeIntensity : Float = 0.7 {
+    var monochromeIntensity : Float = 0.5 {
         didSet {
             monochromeFilterNode.intensity = monochromeIntensity
             renderPreview()
         }
     }
+
+    var enableVignette : Bool = false {
+        didSet {
+            vignetteFilterNode.enabled = enableVignette
+            previewPipeline.invalidate()
+            renderPreview()
+        }
+    }
     
+    var vignetteRadius : Float = 0.7 {
+        didSet {
+            vignetteFilterNode.radius = vignetteRadius
+            renderPreview()
+        }
+    }
+    
+    var red : Float = 1.0 {
+        didSet {
+            colorFilterNode.red = red
+            renderPreview()
+        }
+    }
+
+    var green : Float = 1.0 {
+        didSet {
+            colorFilterNode.green = green
+            renderPreview()
+        }
+    }
+
+    var blue : Float = 1.0 {
+        didSet {
+            colorFilterNode.blue = blue
+            renderPreview()
+        }
+    }
+
     init(originalImage : UIImage, previewImage : UIImage, renderView : RenderView) {
         self.originalImage = originalImage
         self.previewImage = previewImage
@@ -130,9 +168,11 @@ class FilterManager: NSObject {
         // Preview pipeline
         previewPipeline.addNode(inputNode)
         previewPipeline.addNode(wbNode)
+        previewPipeline.addNode(colorFilterNode)
         previewPipeline.addNode(exposureNode)
         previewPipeline.addNode(contrastNode)
         previewPipeline.addNode(vibranceNode)
+        previewPipeline.addNode(vignetteFilterNode)
         previewPipeline.addNode(lookupNode)
         previewPipeline.addNode(monochromeFilterNode)
         previewPipeline.addNode(outputNode)

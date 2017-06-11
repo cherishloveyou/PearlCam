@@ -113,6 +113,28 @@ class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, Adjus
         _ = navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func editButtonDidTap(_ sender: Any) {
+        if adjustmentSelectorView.alpha == 0 {
+            adjustmentSelectorView.alpha = 0
+            adjustmentSelectorView.transform = CGAffineTransform(translationX: 0, y: 15)
+            UIView.animate(withDuration: 0.2, animations: { [weak self] in
+                self?.adjustmentSelectorView.transform = CGAffineTransform.identity
+                self?.adjustmentSelectorView.alpha = 1
+            })
+        } else {
+            // Dismiss any adjustment UI if available
+            if currentAdjustmentUI != nil {
+                dismissCurrentAdjustmentUI(nil)
+            }
+            
+            UIView.animate(withDuration: 0.2, animations: { [weak self] in
+                self?.adjustmentSelectorView.transform = CGAffineTransform(translationX: 0, y: 15)
+                self?.adjustmentSelectorView.alpha = 0
+            })
+        }
+    }
+    
+    @IBOutlet weak var editButtonDidTap: UIButton!
     private func createPreviewImage(w : CGFloat, h : CGFloat) -> UIImage {
         if originalImage.size.width < w && originalImage.size.height < h {
             return originalImage
@@ -130,6 +152,11 @@ class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, Adjus
     // MARK: - FilterSelectorViewDelegate
     
     func didSelectColorPreset(_ colorPreset: String?) {
+        // Dismiss any adjustment filter UI
+        if currentAdjustmentUI != nil {
+            dismissCurrentAdjustmentUI(nil)
+        }
+        
         filterManager.lookupImageName = colorPreset
     }
     
@@ -243,6 +270,26 @@ class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, Adjus
         }
         
         let panel = MonochromeFilterViewController(filterManager)
+        presentAdjustmentUI(panel)
+    }
+    
+    func didRequestVignetteFilterUI() {
+        if currentAdjustmentUI != nil && currentAdjustmentUI! is VignetteFilterViewController {
+            dismissCurrentAdjustmentUI(nil)
+            return
+        }
+        
+        let panel = VignetteFilterViewController(filterManager)
+        presentAdjustmentUI(panel)
+    }
+    
+    func didRequestColorFilterUI() {
+        if currentAdjustmentUI != nil && currentAdjustmentUI! is ColorFilterViewController {
+            dismissCurrentAdjustmentUI(nil)
+            return
+        }
+        
+        let panel = ColorFilterViewController(filterManager)
         presentAdjustmentUI(panel)
     }
     
