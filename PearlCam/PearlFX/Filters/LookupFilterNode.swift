@@ -22,9 +22,18 @@ class LookupFilterNode: FilterNode {
         didSet {
             if lookupImageName == nil {
                 lut.lookupImage = nil
+                enabled = false
             } else {
                 lut.lookupImage = PictureInput(imageName: lookupImageName!)
+                enabled = true
             }
         }
+    }
+    
+    override func cloneFilter() -> FilterNode? {
+        let clone = LookupFilterNode()
+        clone.enabled = enabled
+        clone.lookupImageName = lookupImageName
+        return clone
     }
 }

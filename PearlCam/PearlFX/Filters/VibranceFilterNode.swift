@@ -20,7 +20,16 @@ class VibranceFilterNode: FilterNode {
     
     var vibrance : Float? {
         didSet {
-            vibranceFilter.vibrance = vibrance!
+            if vibrance != nil {
+                vibranceFilter.vibrance = vibrance!
+            }
         }
+    }
+    
+    override func cloneFilter() -> FilterNode? {
+        let clone = VibranceFilterNode()
+        clone.enabled = enabled
+        clone.vibrance = vibrance
+        return clone
     }
 }

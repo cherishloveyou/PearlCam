@@ -42,6 +42,11 @@ class FilterNode : Node {
     override func removeAllTargets() {
         filter.removeAllTargets()
     }
+    
+    func cloneFilter() -> FilterNode? {
+        // Base class has no implementation
+        return nil
+    }
 }
 
 class InputNode : Node {

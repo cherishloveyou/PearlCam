@@ -21,9 +21,17 @@ class MonochromeFilterNode: FilterNode {
     
     var intensity : Float? {
         didSet {
-            let colorValue = 1.0 - intensity!
-            monoFilter.color = Color(red: colorValue, green: colorValue, blue: colorValue)
+            if intensity != nil {
+                let colorValue = 1.0 - intensity!
+                monoFilter.color = Color(red: colorValue, green: colorValue, blue: colorValue)
+            }
         }
     }
     
+    override func cloneFilter() -> FilterNode? {
+        let clone = MonochromeFilterNode()
+        clone.enabled = enabled
+        clone.intensity = intensity
+        return clone
+    }
 }

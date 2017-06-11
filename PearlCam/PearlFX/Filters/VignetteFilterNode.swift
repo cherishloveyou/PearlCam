@@ -21,8 +21,16 @@ class VignetteFilterNode: FilterNode {
     
     var radius : Float? {
         didSet {
-            vigFilter.start = 1.0 - radius!
+            if radius != nil {
+                vigFilter.start = 1.0 - radius!
+            }
         }
     }
 
+    override func cloneFilter() -> FilterNode? {
+        let clone = VignetteFilterNode()
+        clone.enabled = enabled
+        clone.radius = radius
+        return clone
+    }
 }

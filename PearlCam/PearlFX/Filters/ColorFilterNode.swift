@@ -20,20 +20,34 @@ class ColorFilterNode: FilterNode {
     
     var red : Float? {
         didSet {
-            rgbFilter.red = red!
+            if red != nil {
+                rgbFilter.red = red!
+            }
         }
     }
 
     var green : Float? {
         didSet {
-            rgbFilter.green = green!
+            if green != nil {
+                rgbFilter.green = green!
+            }
         }
     }
 
     var blue : Float? {
         didSet {
-            rgbFilter.blue = blue!
+            if blue != nil {
+                rgbFilter.blue = blue!
+            }
         }
     }
 
+    override func cloneFilter() -> FilterNode? {
+        let clone = ColorFilterNode()
+        clone.enabled = enabled
+        clone.red = red
+        clone.green = green
+        clone.blue = blue
+        return clone
+    }
 }

@@ -20,13 +20,25 @@ class WhitebalanceFilterNode: FilterNode {
     
     var temperature : Float? {
         didSet {
-            wbFilter.temperature = temperature!
+            if temperature != nil {
+                wbFilter.temperature = temperature!
+            }
         }
     }
     
     var tint : Float? {
         didSet {
-            wbFilter.tint = tint!
+            if tint != nil {
+                wbFilter.tint = tint!
+            }
         }
+    }
+    
+    override func cloneFilter() -> FilterNode? {
+        let clone = WhitebalanceFilterNode()
+        clone.enabled = enabled
+        clone.temperature = temperature
+        clone.tint = tint
+        return clone
     }
 }

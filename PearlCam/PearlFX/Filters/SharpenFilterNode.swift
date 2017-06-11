@@ -20,9 +20,16 @@ class SharpenFilterNode: FilterNode {
     
     var sharpness : Float? {
         didSet {
-            sharpenFilter.sharpness = sharpness!
+            if sharpness != nil {
+                sharpenFilter.sharpness = sharpness!
+            }
         }
     }
 
-    
+    override func cloneFilter() -> FilterNode? {
+        let clone = SharpenFilterNode()
+        clone.enabled = enabled
+        clone.sharpness = sharpness
+        return clone
+    }
 }

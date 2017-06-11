@@ -20,7 +20,16 @@ class ExposureFilterNode: FilterNode {
     
     var exposure : Float? {
         didSet {
-            expFilter.exposure = exposure!
+            if exposure != nil {
+                expFilter.exposure = exposure!
+            }
         }
+    }
+    
+    override func cloneFilter() -> FilterNode? {
+        let clone = ExposureFilterNode()
+        clone.enabled = enabled
+        clone.exposure = exposure
+        return clone
     }
 }

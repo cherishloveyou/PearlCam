@@ -8,6 +8,7 @@
 
 import UIKit
 import GPUImage
+import AVFoundation
 
 class FilterManager: NSObject {
 
@@ -28,6 +29,7 @@ class FilterManager: NSObject {
     private var previewImage : UIImage
     private var previewView : RenderView
     private var previewInput : PictureInput!
+    private var cameraPosition : AVCaptureDevicePosition
     
     // Filters
     private var lookupNode = LookupFilterNode()
@@ -49,14 +51,12 @@ class FilterManager: NSObject {
                     previewPipeline.invalidate()
                 }
                 
-                lookupNode.enabled = false
                 lookupNode.lookupImageName = nil
             } else {
                 if !lookupNode.enabled {
                     previewPipeline.invalidate()
                 }
                 
-                lookupNode.enabled = true
                 lookupNode.lookupImageName = lookupImageName
             }
             
@@ -150,10 +150,11 @@ class FilterManager: NSObject {
         }
     }
 
-    init(originalImage : UIImage, previewImage : UIImage, renderView : RenderView) {
+    init(originalImage : UIImage, previewImage : UIImage, renderView : RenderView, cameraPosition : AVCaptureDevicePosition) {
         self.originalImage = originalImage
         self.previewImage = previewImage
         self.previewView = renderView
+        self.cameraPosition = cameraPosition
         super.init()
         
         initializePipelines()
@@ -180,5 +181,38 @@ class FilterManager: NSObject {
     
     func renderPreview() {
         previewPipeline.render()
+    }
+    
+    func renderProductionImage(completion : @escaping ((Data) -> Void)) {
+        // Normalize the original image
+        var productionImage = ImageUtils.fixOrientation(originalImage, width: originalImage.size.width, height: originalImage.size.height)!
+        if cameraPosition == .front {
+            productionImage = ImageUtils.flipImage(productionImage)
+        }
+        
+        let prodPipeline = Pipeline()
+        let prodInput = PictureInput(image: productionImage)
+        let prodOutput = PictureOutput()
+        let prodInputNode = InputNode(input: prodInput)
+        let prodOutputNode = OutputNode(output: prodOutput)
+        
+        // Copy all the filter settings from the preview pipeline
+        prodPipeline.addNode(prodInputNode)
+        prodPipeline.addNode(wbNode.cloneFilter()!)
+        prodPipeline.addNode(colorFilterNode.cloneFilter()!)
+        prodPipeline.addNode(exposureNode.cloneFilter()!)
+        prodPipeline.addNode(contrastNode.cloneFilter()!)
+        prodPipeline.addNode(vibranceNode.cloneFilter()!)
+        prodPipeline.addNode(vignetteFilterNode.cloneFilter()!)
+        prodPipeline.addNode(lookupNode.cloneFilter()!)
+        prodPipeline.addNode(monochromeFilterNode.cloneFilter()!)
+        prodPipeline.addNode(prodOutputNode)
+        
+        prodOutput.encodedImageFormat = .jpeg
+        prodOutput.encodedImageAvailableCallback = { (renderedData) in
+            completion(renderedData)
+        }
+
+        prodPipeline.render()
     }
 }

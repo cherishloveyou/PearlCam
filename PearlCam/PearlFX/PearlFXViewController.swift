@@ -25,11 +25,15 @@ class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, Adjus
     @IBOutlet weak var filterSelectorView: FilterSelectorView!
     @IBOutlet weak var adjustmentSelectorView: AdjustmentSelectorView!
     
-    // Rendering pipeline
+    // Preview pipeline
     private var filterManager : FilterManager!
     private var previewInput : PictureInput!
     private var previewOutput : PictureOutput!
     private var previewImage : UIImage!
+    
+    // Production pipeline
+    private var productionInput : PictureInput!
+    private var productionOutput : PictureOutput!
     
     // Presets
     private var presetThumbnailImage : UIImage!
@@ -53,6 +57,12 @@ class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, Adjus
         initializePreview()
         filterSelectorView.delegate = self
         adjustmentSelectorView.delegate = self
+        
+        #if STANDALONE_MODE
+            confirmButton.setTitle("SAVE", for: .normal)
+        #else
+            confirmButton.setTitle("CONFIRM", for: .normal)
+        #endif
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -104,7 +114,7 @@ class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, Adjus
         }
         
         // Setup the initial render pipeline
-        filterManager = FilterManager(originalImage: originalImage, previewImage: previewImage, renderView: previewView)
+        filterManager = FilterManager(originalImage: originalImage, previewImage: previewImage, renderView: previewView, cameraPosition : cameraPosition)
         filterSelectorView.filterManager = filterManager
         filterManager.renderPreview()
     }
@@ -161,37 +171,24 @@ class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, Adjus
     }
     
     @IBAction func confirmButtonDidTap(_ sender: Any) {
-//        var image = ImageUtils.fixOrientation(originalImage, width: originalImage.size.width, height: originalImage.size.height)!
-//        if cameraPosition == .front {
-//            image = ImageUtils.flipImage(image)
-//        }
-//        
-//        let input = PictureInput(image: image)
-//        let output2 = PictureOutput()
-//        
-//        output2.encodedImageFormat = .jpeg
-//        output2.encodedImageAvailableCallback = { (renderedData) in
-//            PHPhotoLibrary.shared().performChanges( {
-//                let creationRequest = PHAssetCreationRequest.forAsset()
-//                creationRequest.addResource(with: PHAssetResourceType.photo, data: renderedData, options: nil)
-//                }, completionHandler: { success, error in
-//                    DispatchQueue.main.async {
-//                        // Ignore
-//                    }
-//            })
-//        }
-//        
-//        if let selectedPreset = filterSelectorView.selectedPreset {
-//            let preset = selectedPreset as! LookupPreset
-//            let filter = LookupPreset(preset.lookImageName).filter!
-//            input --> filter --> output2
-//        } else {
-//            input --> output2
-//        }
-//        
-//        input.processImage(synchronously: true)
+        #if STANDALONE_MODE
+            renderProdImageAndSave()
+        #endif
     }
 
+    private func renderProdImageAndSave() {
+        filterManager.renderProductionImage(completion: { (renderedData) in
+            PHPhotoLibrary.shared().performChanges( {
+                let creationRequest = PHAssetCreationRequest.forAsset()
+                creationRequest.addResource(with: PHAssetResourceType.photo, data: renderedData, options: nil)
+                }, completionHandler: { success, error in
+                    DispatchQueue.main.async {
+                        // Ignore
+                    }
+            })
+        })
+    }
+    
     private func presentAdjustmentUI(_ panel : AdjustmentUIViewController) {
         let previousPanel = currentAdjustmentUI
         currentAdjustmentUI = panel

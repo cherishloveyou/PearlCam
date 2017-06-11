@@ -22,8 +22,17 @@ class ContrastFilterNode: FilterNode {
     
     var contrast : Float? {
         didSet {
-            contrastFilter.contrast = contrast!
+            if contrast != nil {
+                contrastFilter.contrast = contrast!
+            }
         }
+    }
+    
+    override func cloneFilter() -> FilterNode? {
+        let clone = ContrastFilterNode()
+        clone.enabled = enabled
+        clone.contrast = contrast
+        return clone
     }
 }
 

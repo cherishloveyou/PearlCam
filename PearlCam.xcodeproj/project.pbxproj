@@ -731,6 +731,7 @@
 				INFOPLIST_FILE = PearlCam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DSTANDALONE_MODE";
 				PRODUCT_BUNDLE_IDENTIFIER = org.delphi.you.PearlCam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -746,6 +747,7 @@
 				INFOPLIST_FILE = PearlCam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DSTANDALONE_MODE";
 				PRODUCT_BUNDLE_IDENTIFIER = org.delphi.you.PearlCam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

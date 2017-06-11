@@ -39,7 +39,6 @@ class Pipeline: NSObject {
         }
         
         var previousNode : Node?
-        var lastFilterNode : FilterNode?
         for node in nodes {
             guard node.enabled else { continue }
             
@@ -48,10 +47,6 @@ class Pipeline: NSObject {
             }
             
             previousNode = node
-            
-            if node is FilterNode {
-                lastFilterNode = node as? FilterNode
-            }
         }
     }
     
