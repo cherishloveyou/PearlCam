@@ -12,20 +12,16 @@ import UIKit
 import AVFoundation
 import CRRulerControl
 
-enum MeterType {
-    case exposureCompensation
-    case iso
-    case shutterSpeed
-}
-
 protocol CameraOverlayDelegate : NSObjectProtocol {
     func switchCameraButtonDidTap()
     func shutterButtonDidTap()
     func didTapOnViewFinder(_ point : CGPoint)
     func userDidChangeExpComp(_ ec : Float)
+    func userDidChangeISO(_ iso : Float)
+    func autoManualModeButtonDidTap()
 }
 
-class CameraUIViewController: UIViewController {
+class CameraUIViewController: UIViewController, MeterViewDelegate {
 
     @IBOutlet weak var expControlLabel: UILabel!
     @IBOutlet weak var switchCameraButton: UIButton!
@@ -35,15 +31,15 @@ class CameraUIViewController: UIViewController {
     @IBOutlet weak var shutterSpeedLabel: UILabel!
     @IBOutlet weak var expControlView: UIStackView!
     @IBOutlet weak var isoLabel: UILabel!
-    @IBOutlet weak var rulerView: CRRulerControl!
-    @IBOutlet weak var rulerContainerView: UIView!
-    @IBOutlet weak var rulerContainerBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var exposureIndicatorCenterConstraint: NSLayoutConstraint!
     @IBOutlet weak var lightMeterWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var exposureModeButton: UIButton!
+    @IBOutlet weak var isoControlView: UIView!
     
     private var exposureIndicatorOffset : CGFloat = 2
     private var viewFinder : ViewFinder?
     
+    var iso : Float?
     var minISO : Float?
     var maxISO : Float?
     var maxZoomFactor : CGFloat?
@@ -55,10 +51,15 @@ class CameraUIViewController: UIViewController {
     var isAutoExpModeSupported : Bool?
     var isContinuousAutoExpModeSupported : Bool?
     var expComp : Float = 0
-    
-    var currentMeter : MeterType?
+    private var exposureMode : AVCaptureExposureMode?
+    private let defaultISO : Float = 100
     
     weak var delegate : CameraOverlayDelegate?
+    
+    // Current slider view
+    var currentMeter : MeterType?
+    private var currentMeterView : MeterView?
+    private let meterViewHeight : CGFloat = 70
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +89,10 @@ class CameraUIViewController: UIViewController {
         
         let expTap = UITapGestureRecognizer(target: self, action: #selector(didTapOnExpControl(_:)))
         expControlView.addGestureRecognizer(expTap)
+        
+        let isoTap = UITapGestureRecognizer(target: self, action: #selector(didTapOnISOControl(_:)))
+        isoControlView.addGestureRecognizer(isoTap)
+
     }
     
     override func viewWillLayoutSubviews() {
@@ -141,27 +146,44 @@ class CameraUIViewController: UIViewController {
     }
     
     func isoReadingDidChange(_ iso : Float) {
+        self.iso = iso
         let displayValue = Int(iso)
         isoLabel.text = "\(displayValue)"
+    }
+    
+    func exposureModeDidChange(_ mode : AVCaptureExposureMode) {
+        self.exposureMode = mode
+        
+        if mode == .autoExpose || mode == .continuousAutoExposure {
+            exposureModeButton.setImage(UIImage(named: "AutoExpButton"), for: .normal)
+        } else {
+            exposureModeButton.setImage(UIImage(named: "ManualExpButton"), for: .normal)
+        }
     }
     
     private func fadeInMeterView(_ type : MeterType) {
         guard viewFinder != nil else { return }
         guard minExpComp != nil, maxExpComp != nil else { return }
         
-        rulerContainerBottomConstraint.constant = view.bounds.maxY - viewFinder!.bounds.maxY
+        let meterOriginY : CGFloat = viewFinder!.bounds.maxY - meterViewHeight
+        let f = CGRect(x: 0, y: meterOriginY, width: view.bounds.width, height: meterViewHeight)
         
         currentMeter = type
         if type == .exposureCompensation {
-            initializeExpCompSlider()
+            currentMeterView = MeterView(meterType : .exposureCompensation, minValue: minExpComp!, maxValue: maxExpComp!, currentValue: expComp, frame: f)
+        } else if type == .iso {
+            let currentISO = (iso != nil ? iso! : defaultISO)
+            currentMeterView = MeterView(meterType : .iso, minValue: minISO!, maxValue: maxISO!, currentValue: currentISO, frame: f)
         }
         
-        rulerContainerView.isHidden = false
-        rulerContainerView.alpha = 0
-        rulerContainerView.transform = CGAffineTransform(translationX: 0, y: 60)
+        currentMeterView!.delegate = self
+        view.addSubview(currentMeterView!)
+        currentMeterView!.isHidden = false
+        currentMeterView!.alpha = 0
+        currentMeterView!.transform = CGAffineTransform(translationX: 0, y: 20)
         UIView.animate(withDuration: 0.2) { [weak self] in
-            self?.rulerContainerView.alpha = 1
-            self?.rulerContainerView.transform = CGAffineTransform.identity
+            self?.currentMeterView?.alpha = 1
+            self?.currentMeterView?.transform = CGAffineTransform.identity
         }
     }
     
@@ -169,21 +191,11 @@ class CameraUIViewController: UIViewController {
         guard minExpComp != nil, maxExpComp != nil else { return }
         
         UIView.animate(withDuration: 0.2, animations: { [weak self] in
-            self?.rulerContainerView.alpha = 0
-            self?.rulerContainerView.transform = CGAffineTransform(translationX: 0, y: 60)
+            self?.currentMeterView?.alpha = 0
+            self?.currentMeterView?.transform = CGAffineTransform(translationX: 0, y: 20)
         }) { [weak self] (finished) in
-            self?.rulerContainerView.isHidden = true
+            self?.currentMeterView?.isHidden = true
         }
-    }
-    
-    private func initializeExpCompSlider() {
-        rulerView.rulerWidth = view.bounds.width * 1.4
-        rulerView.rangeFrom = CGFloat(minExpComp!)
-        rulerView.rangeLength = CGFloat(maxExpComp! - minExpComp!)
-        rulerView.spacingBetweenMarks = 30
-        rulerView.setValue(CGFloat(expComp), animated: false)
-        
-        rulerView.setNeedsLayout()
     }
     
     @IBAction func switchCameraButtonDidTap(_ sender: Any) {
@@ -191,23 +203,48 @@ class CameraUIViewController: UIViewController {
     }
 
     @IBAction func shutterButtonDidTap(_ sender: Any) {
+        if currentMeterView != nil && !currentMeterView!.isHidden {
+            fadeOutMeterView()
+        }
+
         delegate?.shutterButtonDidTap()
     }
 
-    @IBAction func rulerValueChanged(_ sender: Any) {
+    @IBAction func autoManualButtonDidTap(_ sender: Any) {
+        if currentMeterView != nil && !currentMeterView!.isHidden {
+            fadeOutMeterView()
+        }
+
+        // Do not switch mode if either auto or manual mode being not supported
+        guard isAutoExpModeSupported != nil && isManualExpModeSupported != nil else { return }
+        guard isAutoExpModeSupported! && isManualExpModeSupported! else { return }
+        delegate?.autoManualModeButtonDidTap()
+    }
+    
+    // MARK: - MeterViewDelegate
+    
+    func meterValueDidChange(_ value: Float) {
         guard currentMeter != nil else { return }
-        let ruler = sender as! CRRulerControl
         
         if let meterType = currentMeter {
             if meterType == .exposureCompensation {
-                expComp = Float(ruler.value)
+                guard minExpComp != nil && maxExpComp != nil else { return }
+                guard value >= minExpComp! && value <= maxExpComp! else { return }
+                expComp = value
                 if expComp >= 0 {
                     expControlLabel.text = String(format: "+%.1f", expComp)
                 } else {
                     expControlLabel.text = String(format: "%.1f", expComp)
                 }
                 
-                delegate?.userDidChangeExpComp(Float(ruler.value))
+                delegate?.userDidChangeExpComp(value)
+            } else if meterType == .iso {
+                guard minISO != nil && maxISO != nil else { return }
+                guard value >= minISO! && value <= maxISO! else { return }
+                iso = value
+                let displayValue = Int(iso!)
+                isoLabel.text = "\(displayValue)"
+                delegate?.userDidChangeISO(iso!)
             }
         }
     }
@@ -215,7 +252,7 @@ class CameraUIViewController: UIViewController {
     // MARK: - Gestures
     
     @objc private func didTapOnViewFinder(_ tap : UITapGestureRecognizer) {
-        if !rulerContainerView.isHidden {
+        if currentMeterView != nil && !currentMeterView!.isHidden {
             fadeOutMeterView()
             return
         }
@@ -229,11 +266,29 @@ class CameraUIViewController: UIViewController {
     }
     
     @objc private func didTapOnExpControl(_ tap : UITapGestureRecognizer) {
-        if !rulerContainerView.isHidden {
+        if currentMeterView != nil && !currentMeterView!.isHidden {
             fadeOutMeterView()
             return
         } else {
             fadeInMeterView(.exposureCompensation)
+        }
+    }
+    
+    @objc private func didTapOnISOControl(_ tap : UITapGestureRecognizer) {
+        if isManualExpModeSupported == nil || !isManualExpModeSupported! {
+            return
+        }
+        
+        if currentMeterView != nil && !currentMeterView!.isHidden {
+            fadeOutMeterView()
+            return
+        } else {
+            // We need to set the camera exposure mode to manual so that we can set fixed iso
+            if exposureMode == nil || exposureMode! == .autoExpose || exposureMode! == .continuousAutoExposure {
+                delegate?.autoManualModeButtonDidTap()
+            }
+            
+            fadeInMeterView(.iso)
         }
     }
 }

@@ -19,6 +19,7 @@ protocol CameraDelegate : NSObjectProtocol {
     func lightMeterReadingDidChange(_ offset : Float)
     func shutterSpeedReadingDidChange(_ duration : CMTime)
     func isoReadingDidChange(_ iso : Float)
+    func exposureModeDidChange(_ mode : AVCaptureExposureMode)
 }
 
 class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
@@ -38,7 +39,10 @@ class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
     var previewPhotoSampleBuffer: CMSampleBuffer?
     
     var context = CIContext()
-    var faceDetector : CIDetector!
+
+    var exposureMode : AVCaptureExposureMode? {
+        return currentCamera?.exposureMode
+    }
     
     var minISO : Float? {
         return currentCamera?.activeFormat.minISO
@@ -96,6 +100,14 @@ class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
         }
         
         currentCamera = nil
+    }
+    
+    static func hasFrontCamera() -> Bool {
+        return (AVCaptureDevice.defaultDevice(withDeviceType: .builtInWideAngleCamera, mediaType: AVMediaTypeVideo, position: .front) != nil)
+    }
+    
+    static func hasBackCamera() -> Bool {
+        return (AVCaptureDevice.defaultDevice(withDeviceType: .builtInWideAngleCamera, mediaType: AVMediaTypeVideo, position: .back) != nil)
     }
     
     private func initializeDeviceSupport() {
@@ -190,6 +202,7 @@ class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
             camera.addObserver(self, forKeyPath: #keyPath(AVCaptureDevice.exposureTargetOffset), options: [.old, .new], context: nil)
             camera.addObserver(self, forKeyPath: #keyPath(AVCaptureDevice.exposureDuration), options: [.old, .new], context: nil)
             camera.addObserver(self, forKeyPath: #keyPath(AVCaptureDevice.iso), options: [.old, .new], context: nil)
+            camera.addObserver(self, forKeyPath: #keyPath(AVCaptureDevice.exposureMode), options: [.old, .new], context: nil)
         }
     }
     
@@ -200,12 +213,8 @@ class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
             camera.removeObserver(self, forKeyPath: #keyPath(AVCaptureDevice.exposureTargetOffset))
             camera.removeObserver(self, forKeyPath: #keyPath(AVCaptureDevice.exposureDuration))
             camera.removeObserver(self, forKeyPath: #keyPath(AVCaptureDevice.iso))
+            camera.removeObserver(self, forKeyPath: #keyPath(AVCaptureDevice.exposureMode))
         }
-    }
-    
-    private func initializeFaceDetector() {
-        let options = [CIDetectorAccuracy : CIDetectorAccuracyHigh]
-        faceDetector = CIDetector(ofType: CIDetectorTypeFace, context: context, options: options)
     }
     
     func updateVideoOrientationForDeviceOrientation() {
@@ -255,6 +264,51 @@ class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
             do {
                 try camera.lockForConfiguration()
                 camera.setExposureTargetBias(ec, completionHandler: nil)
+                camera.unlockForConfiguration()
+            } catch let error {
+                debugPrint("Failed to set exposure compensation: \(error)")
+            }
+        }
+    }
+    
+    func setISO(_ iso : Float) {
+        if let camera = currentCamera {
+            guard camera.isExposureModeSupported(.custom) else { return }
+            guard camera.exposureMode == .custom else { return }
+            do {
+                try camera.lockForConfiguration()
+                camera.setExposureModeCustomWithDuration(camera.exposureDuration, iso: iso, completionHandler: nil)
+                camera.unlockForConfiguration()
+            } catch let error {
+                debugPrint("Failed to set exposure compensation: \(error)")
+            }
+        }
+    }
+    
+    func switchToAutoExposureMode() {
+        if let camera = currentCamera {
+            guard camera.isExposureModeSupported(.continuousAutoExposure) || camera.isExposureModeSupported(.autoExpose) else { return }
+            guard camera.exposureMode != .autoExpose && camera.exposureMode != .continuousAutoExposure else { return }
+            do {
+                try camera.lockForConfiguration()
+                if camera.isExposureModeSupported(.continuousAutoExposure) {
+                    camera.exposureMode = .continuousAutoExposure
+                } else if camera.isExposureModeSupported(.autoExpose) {
+                    camera.exposureMode = .autoExpose
+                }
+                camera.unlockForConfiguration()
+            } catch let error {
+                debugPrint("Failed to set exposure compensation: \(error)")
+            }
+        }
+    }
+    
+    func switchToManualExposureMode() {
+        if let camera = currentCamera {
+            guard camera.exposureMode != .custom else { return }
+            do {
+                try camera.lockForConfiguration()
+                camera.setExposureModeCustomWithDuration(camera.exposureDuration, iso: camera.iso, completionHandler: nil)
                 camera.unlockForConfiguration()
             } catch let error {
                 debugPrint("Failed to set exposure compensation: \(error)")
@@ -358,6 +412,8 @@ class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
             delegate?.shutterSpeedReadingDidChange(currentCamera!.exposureDuration)
         } else if keyPath == #keyPath(AVCaptureDevice.iso) {
             delegate?.isoReadingDidChange(currentCamera!.iso)
+        } else if keyPath == #keyPath(AVCaptureDevice.exposureMode) {
+            delegate?.exposureModeDidChange(currentCamera!.exposureMode)
         }
     }
 }

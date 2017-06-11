@@ -26,6 +26,9 @@ class PearlCamViewController: UIViewController, CameraOverlayDelegate, CameraDel
     // Whether the UI has been initialized
     var isUIInitialized = false
     
+    var hasFrontCamera : Bool!
+    var hasBackCamera : Bool!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         camera = CameraController(position : .back)
@@ -163,6 +166,7 @@ class PearlCamViewController: UIViewController, CameraOverlayDelegate, CameraDel
 
     private func cameraDidFinishInitialization(_ success : Bool) {
         if success {
+            removeOverlay()
             initializeOverlayIfNecessary()
             camera.start()
         } else {
@@ -174,6 +178,9 @@ class PearlCamViewController: UIViewController, CameraOverlayDelegate, CameraDel
         if isUIInitialized {
             return
         }
+        
+        hasFrontCamera = CameraController.hasFrontCamera()
+        hasBackCamera = CameraController.hasBackCamera()
         
         // Setup UI overlay
         isUIInitialized = true
@@ -195,6 +202,15 @@ class PearlCamViewController: UIViewController, CameraOverlayDelegate, CameraDel
         overlay!.isContinuousAutoExpModeSupported = camera.isContinuousAutoExpModeSupported
         overlay!.minShutterSpeed = camera.minShutterSpeed
         overlay!.maxShutterSpeed = camera.maxShutterSpeed
+    }
+    
+    private func removeOverlay() {
+        guard overlay != nil else { return }
+        overlay!.willMove(toParentViewController: nil)
+        overlay!.view.removeFromSuperview()
+        overlay!.removeFromParentViewController()
+        overlay = nil
+        isUIInitialized = false
     }
     
     // MARK: - CameraDelegate
@@ -230,6 +246,8 @@ class PearlCamViewController: UIViewController, CameraOverlayDelegate, CameraDel
     
     // MARK : - CameraOverlayDelegate
     func switchCameraButtonDidTap() {
+        guard hasFrontCamera && hasBackCamera else { return }
+        
         if camera.cameraPosition == .back {
             camera = CameraController(position : .front)
             camera.delegate = self
@@ -251,6 +269,10 @@ class PearlCamViewController: UIViewController, CameraOverlayDelegate, CameraDel
     
     func userDidChangeExpComp(_ ec: Float) {
         camera.setExposureCompensation(ec)
+    }
+    
+    func userDidChangeISO(_ iso: Float) {
+        camera.setISO(iso)
     }
     
     func focusPointDidChange(_ point: CGPoint) {
@@ -275,6 +297,20 @@ class PearlCamViewController: UIViewController, CameraOverlayDelegate, CameraDel
     
     func isoReadingDidChange(_ iso: Float) {
         overlay!.isoReadingDidChange(iso)
+    }
+    
+    func autoManualModeButtonDidTap() {
+        if let expMode = camera.exposureMode {
+            if expMode == .autoExpose || expMode == .continuousAutoExposure {
+                camera.switchToManualExposureMode()
+            } else {
+                camera.switchToAutoExposureMode()
+            }
+        }
+    }
+    
+    func exposureModeDidChange(_ mode: AVCaptureExposureMode) {
+        overlay?.exposureModeDidChange(mode)
     }
     
     // MARK: - ViewFinderDelegate
