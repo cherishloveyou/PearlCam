@@ -7,5 +7,6 @@ target 'PearlCam' do
 
   # Pods for PearlCam
   pod 'CRRulerControl'
+  pod "RMessage"
 
 end

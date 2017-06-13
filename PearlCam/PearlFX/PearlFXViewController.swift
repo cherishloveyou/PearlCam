@@ -11,6 +11,7 @@
 import UIKit
 import GPUImage
 import Photos
+import RMessage
 
 class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, AdjustmentSelectorDelegate, AdjustmentUIDelegate {
     
@@ -177,13 +178,22 @@ class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, Adjus
     }
 
     private func renderProdImageAndSave() {
+        view.isUserInteractionEnabled = false
+        RMessage.showNotification(withTitle: "Saving photo...", type: .success, customTypeName: nil, callback: nil)
+        
         filterManager.renderProductionImage(completion: { (renderedData) in
             PHPhotoLibrary.shared().performChanges( {
                 let creationRequest = PHAssetCreationRequest.forAsset()
                 creationRequest.addResource(with: PHAssetResourceType.photo, data: renderedData, options: nil)
-                }, completionHandler: { success, error in
+                }, completionHandler: { [weak self] success, error in
                     DispatchQueue.main.async {
-                        // Ignore
+                        if success {
+                            RMessage.showNotification(withTitle: "Saved to your photo library", type: .success, customTypeName: nil, callback: nil)
+                        } else {
+                            RMessage.showNotification(withTitle: "Failed to save to your photo library", type: .error, customTypeName: nil, callback: nil)
+                        }
+                        
+                        self?.view.isUserInteractionEnabled = false
                     }
             })
         })

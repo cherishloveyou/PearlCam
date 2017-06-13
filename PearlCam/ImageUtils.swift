@@ -12,6 +12,7 @@ import UIKit
 import GPUImage
 
 class ImageUtils: NSObject {
+    
     static func correctedImageOrientation(image : UIImage) -> ImageOrientation {
         var orientation : ImageOrientation = .portrait
         if image.imageOrientation == .right {
@@ -27,9 +28,8 @@ class ImageUtils: NSObject {
         return orientation
     }
     
-    // https://stackoverflow.com/a/33260568
+    // Example taken from: https://stackoverflow.com/a/33260568
     static func fixOrientation(_ input : UIImage, width : CGFloat, height : CGFloat) -> UIImage? {
-        
         guard let cgImage = input.cgImage else {
             return nil
         }
@@ -39,19 +39,16 @@ class ImageUtils: NSObject {
         }
         
         var transform = CGAffineTransform.identity
-        
         switch input.imageOrientation {
         case .down, .downMirrored:
             transform = transform.translatedBy(x: width, y: height)
             transform = transform.rotated(by: CGFloat.pi)
-            
         case .left, .leftMirrored:
             transform = transform.translatedBy(x: width, y: 0)
-            transform = transform.rotated(by: 0.5*CGFloat.pi)
-            
+            transform = transform.rotated(by: 0.5 * CGFloat.pi)
         case .right, .rightMirrored:
             transform = transform.translatedBy(x: 0, y: height)
-            transform = transform.rotated(by: -0.5*CGFloat.pi)
+            transform = transform.rotated(by: -0.5 * CGFloat.pi)
         case .up, .upMirrored:
             break
         }
@@ -60,11 +57,9 @@ class ImageUtils: NSObject {
         case .upMirrored, .downMirrored:
             transform = transform.translatedBy(x: width, y: 0)
             transform = transform.scaledBy(x: -1, y: 1)
-            
         case .leftMirrored, .rightMirrored:
             transform = transform.translatedBy(x: height, y: 0)
             transform = transform.scaledBy(x: -1, y: 1)
-            
         default:
             break;
         }
@@ -92,9 +87,7 @@ class ImageUtils: NSObject {
         switch input.imageOrientation {
             
         case .left, .leftMirrored, .right, .rightMirrored:
-            // Grr...
             context.draw(cgImage, in: CGRect(x: 0, y: 0, width: height, height: width))
-            
         default:
             context.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
         }
@@ -105,20 +98,22 @@ class ImageUtils: NSObject {
         }
         
         let img = UIImage(cgImage: newCGImg)
-        
         return img;
     }
     
-    // https://stackoverflow.com/a/43536102
-    static func flipImage(_ image: UIImage) -> UIImage {
+    // Example taken from: https://stackoverflow.com/a/43536102
+    static func flipImage(_ image: UIImage) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
-        let context = UIGraphicsGetCurrentContext()!
-        context.translateBy(x: image.size.width, y: image.size.height)
-        context.scaleBy(x: -image.scale, y: -image.scale)
-        context.draw(image.cgImage!, in: CGRect(origin:CGPoint.zero, size: image.size))
-        
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage!
+        if let context = UIGraphicsGetCurrentContext() {
+            context.translateBy(x: image.size.width, y: image.size.height)
+            context.scaleBy(x: -image.scale, y: -image.scale)
+            context.draw(image.cgImage!, in: CGRect(origin:CGPoint.zero, size: image.size))
+            
+            let newImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            return newImage
+        } else {
+            return nil
+        }
     }
 }

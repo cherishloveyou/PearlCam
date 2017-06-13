@@ -1,1312 +1,1187 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>01084F7703DD810A0FD72EC7FC637F5B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D2E1A553B529C777CB4592A6D1005AF1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>09C27F3AA1F8D7E48B41CFE7748D8DDB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CRMark.h</string>
-			<key>path</key>
-			<string>CRRulerControl/Classes/CRMark.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0AFE6F17764F6D0FE77A453104605ED3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-PearlCam-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0EB74D758045321B3393F674DB01FD48</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>09C27F3AA1F8D7E48B41CFE7748D8DDB</string>
-				<string>220C4D5673899996A33889A1EF6601EF</string>
-				<string>D2E1A553B529C777CB4592A6D1005AF1</string>
-				<string>EED328A33B0CAA280BF1564DAB5AF57E</string>
-				<string>7BA48CD3A94BE5B1F34823653844BB4B</string>
-				<string>F7844FAFBDB347FFE151A45449F4DBC4</string>
-				<string>C03CB59E64679AA5F69E0319970D9066</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>CRRulerControl</string>
-			<key>path</key>
-			<string>CRRulerControl</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>101157A910BC1806D33FE85F71606B7C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-PearlCam.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1077526C82C89E42ADD99B241A6A32BE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EF54D043DDA268B274B1266B934219DA</string>
-				<string>2402B6073783640DE2BA2EBF86A9C5C7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1EFB872933ABE0A1E5B2EBB8351ED1B9</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>23CE4647591C91D95338D5E9CD9D029D</string>
-			<key>remoteInfo</key>
-			<string>CRRulerControl</string>
-		</dict>
-		<key>220C4D5673899996A33889A1EF6601EF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CRMark.m</string>
-			<key>path</key>
-			<string>CRRulerControl/Classes/CRMark.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>23CE4647591C91D95338D5E9CD9D029D</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>D1E7D60060E2181C15CA083E0D740BAA</string>
-			<key>buildPhases</key>
-			<array>
-				<string>F00CBB8A7936F71BAAB227E7175600E0</string>
-				<string>A4781F4F9AABEC9DBE337E4A6A50CCC4</string>
-				<string>55F5108FC7A6AC9EA80B4669EBDC8989</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>CRRulerControl</string>
-			<key>productName</key>
-			<string>CRRulerControl</string>
-			<key>productReference</key>
-			<string>EF54D043DDA268B274B1266B934219DA</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>2402B6073783640DE2BA2EBF86A9C5C7</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_PearlCam.framework</string>
-			<key>path</key>
-			<string>Pods-PearlCam.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>24D74F2E8ADC7E9E5F42481C805501A8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>220C4D5673899996A33889A1EF6601EF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>25DDC517B4EF6109B4B48E3800ED8FD4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-PearlCam-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>59B042A655B7C20CBAB90E385BF4E4C7</string>
-				<string>B7324857C38B065FEB1EEE3105C2367A</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2FBA38B2B5B83733C5D7FCCE5B1D1C31</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3471157F4F4D09DEEB3BD9C9943BF74F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>CRRulerControl.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3593718ABB6999029795A04C8B1307BC</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>4643E2C7A2977CC5831E6C9F7848F362</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=appletvos*]</key>
-				<string></string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string></string>
-				<key>CODE_SIGN_IDENTITY[sdk=watchos*]</key>
-				<string></string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-PearlCam/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-PearlCam/Pods-PearlCam.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_PearlCam</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>3DCAB2B7CDE207B3958B6CB957FCC758</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3E7DDD299AF89C180E32CB67ED682305</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>EC3075ED6EB88F97F1638EBE7D1E9DD5</string>
-			<key>buildPhases</key>
-			<array>
-				<string>A1D171C1AC41F85C8B2D5E6E9DB8AF14</string>
-				<string>5EF3852C51BC6D0067AFBC8497D27345</string>
-				<string>6F6F8BBC0874881D4C696EFB52CEBEBD</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>69C97E9E7DF5BCB33C34DF22C0E7100D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-PearlCam</string>
-			<key>productName</key>
-			<string>Pods-PearlCam</string>
-			<key>productReference</key>
-			<string>2402B6073783640DE2BA2EBF86A9C5C7</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>4643E2C7A2977CC5831E6C9F7848F362</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-PearlCam.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>46D01BB00BB7A166C40133CBACE37CE9</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>FE445E1D3B6385B326706F5E2676E8BD</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=appletvos*]</key>
-				<string></string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string></string>
-				<key>CODE_SIGN_IDENTITY[sdk=watchos*]</key>
-				<string></string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-PearlCam/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-PearlCam/Pods-PearlCam.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_PearlCam</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>4A553ADFAD921BAEEC07EAEFC9EAB4FE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EED328A33B0CAA280BF1564DAB5AF57E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>55F5108FC7A6AC9EA80B4669EBDC8989</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A561C7866B765E7CFD2B40303D22D0AE</string>
-				<string>B4744465FC4E20008749FABCFFE25DB0</string>
-				<string>01084F7703DD810A0FD72EC7FC637F5B</string>
-				<string>8F3B65EE2E3A6E01054B9BBD5DF47D67</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>593742963A6593AB9CEB8E837632EA76</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-PearlCam-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>59B042A655B7C20CBAB90E385BF4E4C7</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGNING_REQUIRED</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>POD_CONFIGURATION_DEBUG=1</string>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>PROVISIONING_PROFILE_SPECIFIER</key>
-				<string>NO_SIGNING/</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5EF3852C51BC6D0067AFBC8497D27345</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EC13B18A3C76800CD7120F7CA0FFC076</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>65C6DA29E27E43D9E4729DFE9513E8E3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F5F09CCC7DC8E7E6BA8EA8CC8539C4D8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>68BF04C076D408A7489E5D7C00D557C7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>CRRulerControl-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>68E5054FFE6DF993A14D26B4D7AFD726</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F7844FAFBDB347FFE151A45449F4DBC4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>69C97E9E7DF5BCB33C34DF22C0E7100D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>CRRulerControl</string>
-			<key>target</key>
-			<string>23CE4647591C91D95338D5E9CD9D029D</string>
-			<key>targetProxy</key>
-			<string>1EFB872933ABE0A1E5B2EBB8351ED1B9</string>
-		</dict>
-		<key>6D67BA382DA032A69E35F07EC744E533</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CEBACD6F8994EEED81B5A8A917EFAF57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>6F6F8BBC0874881D4C696EFB52CEBEBD</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>6D67BA382DA032A69E35F07EC744E533</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7254DAF55C0400A85C875C50E7600E0E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>0EB74D758045321B3393F674DB01FD48</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>73C6A6EC22D80BB49D3B70DF1C49DC07</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>3471157F4F4D09DEEB3BD9C9943BF74F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=appletvos*]</key>
-				<string></string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string></string>
-				<key>CODE_SIGN_IDENTITY[sdk=watchos*]</key>
-				<string></string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/CRRulerControl/CRRulerControl-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/CRRulerControl/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/CRRulerControl/CRRulerControl.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>CRRulerControl</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7BA48CD3A94BE5B1F34823653844BB4B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CRRulerLayer.h</string>
-			<key>path</key>
-			<string>CRRulerControl/Classes/CRRulerLayer.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>93A4A3777CF96A4AAC1D13BA6DCCEA73</string>
-				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
-				<string>7254DAF55C0400A85C875C50E7600E0E</string>
-				<string>1077526C82C89E42ADD99B241A6A32BE</string>
-				<string>65C6DA29E27E43D9E4729DFE9513E8E3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>82652B71C775E5A3730CF210CAD3CD41</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>CRRulerControl.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8528CE6BA0DA1815FA64F6262E070413</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BB9D4B0C93176B2E9F0792251E168177</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>893CE6C18B880AFFC4FED8F79B2B78F1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>25DDC517B4EF6109B4B48E3800ED8FD4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8F3B65EE2E3A6E01054B9BBD5DF47D67</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7BA48CD3A94BE5B1F34823653844BB4B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>93A4A3777CF96A4AAC1D13BA6DCCEA73</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>text.script.ruby</string>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>A1D171C1AC41F85C8B2D5E6E9DB8AF14</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>893CE6C18B880AFFC4FED8F79B2B78F1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A4781F4F9AABEC9DBE337E4A6A50CCC4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2FBA38B2B5B83733C5D7FCCE5B1D1C31</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A561C7866B765E7CFD2B40303D22D0AE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>09C27F3AA1F8D7E48B41CFE7748D8DDB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>B15A30F8EE377F9BDE42126071415D7F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>3471157F4F4D09DEEB3BD9C9943BF74F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=appletvos*]</key>
-				<string></string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string></string>
-				<key>CODE_SIGN_IDENTITY[sdk=watchos*]</key>
-				<string></string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/CRRulerControl/CRRulerControl-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/CRRulerControl/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/CRRulerControl/CRRulerControl.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>CRRulerControl</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B4744465FC4E20008749FABCFFE25DB0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>68BF04C076D408A7489E5D7C00D557C7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>B7324857C38B065FEB1EEE3105C2367A</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGNING_REQUIRED</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>POD_CONFIGURATION_RELEASE=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>PROVISIONING_PROFILE_SPECIFIER</key>
-				<string>NO_SIGNING/</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>BB9D4B0C93176B2E9F0792251E168177</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>CRRulerControl-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BC3CA7F9E30CC8F7E2DD044DD34432FC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3DCAB2B7CDE207B3958B6CB957FCC758</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C03CB59E64679AA5F69E0319970D9066</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>82652B71C775E5A3730CF210CAD3CD41</string>
-				<string>3471157F4F4D09DEEB3BD9C9943BF74F</string>
-				<string>BB9D4B0C93176B2E9F0792251E168177</string>
-				<string>EFD7270DBB01DD35812D98CFD5C1A087</string>
-				<string>68BF04C076D408A7489E5D7C00D557C7</string>
-				<string>C58C9C06C1C5818DC76822904CE47895</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/CRRulerControl</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C58C9C06C1C5818DC76822904CE47895</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CDB58F52D9E75159B90F4EC104AC3FFF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CEBACD6F8994EEED81B5A8A917EFAF57</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-PearlCam-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CEC22C73C1608DFA5D5D78BDCB218219</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>D1E7D60060E2181C15CA083E0D740BAA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B15A30F8EE377F9BDE42126071415D7F</string>
-				<string>73C6A6EC22D80BB49D3B70DF1C49DC07</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>D2E1A553B529C777CB4592A6D1005AF1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CRRulerControl.h</string>
-			<key>path</key>
-			<string>CRRulerControl/Classes/CRRulerControl.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D41D8CD98F00B204E9800998ECF8427E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0700</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7DB346D0F39D3F0E887471402A8071AB</string>
-			<key>productRefGroup</key>
-			<string>1077526C82C89E42ADD99B241A6A32BE</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>23CE4647591C91D95338D5E9CD9D029D</string>
-				<string>3E7DDD299AF89C180E32CB67ED682305</string>
-			</array>
-		</dict>
-		<key>D57CF7918744A7765501205A1D0B8A45</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-PearlCam-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E3014FA4557B5F31BF064BCE6F02F0F2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-PearlCam-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EC13B18A3C76800CD7120F7CA0FFC076</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EC3075ED6EB88F97F1638EBE7D1E9DD5</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>46D01BB00BB7A166C40133CBACE37CE9</string>
-				<string>3593718ABB6999029795A04C8B1307BC</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>EED328A33B0CAA280BF1564DAB5AF57E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CRRulerControl.m</string>
-			<key>path</key>
-			<string>CRRulerControl/Classes/CRRulerControl.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EF54D043DDA268B274B1266B934219DA</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>CRRulerControl.framework</string>
-			<key>path</key>
-			<string>CRRulerControl.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>EFD7270DBB01DD35812D98CFD5C1A087</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>CRRulerControl-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F00CBB8A7936F71BAAB227E7175600E0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>24D74F2E8ADC7E9E5F42481C805501A8</string>
-				<string>8528CE6BA0DA1815FA64F6262E070413</string>
-				<string>4A553ADFAD921BAEEC07EAEFC9EAB4FE</string>
-				<string>68E5054FFE6DF993A14D26B4D7AFD726</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F5F09CCC7DC8E7E6BA8EA8CC8539C4D8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CDB58F52D9E75159B90F4EC104AC3FFF</string>
-				<string>101157A910BC1806D33FE85F71606B7C</string>
-				<string>E3014FA4557B5F31BF064BCE6F02F0F2</string>
-				<string>D57CF7918744A7765501205A1D0B8A45</string>
-				<string>25DDC517B4EF6109B4B48E3800ED8FD4</string>
-				<string>593742963A6593AB9CEB8E837632EA76</string>
-				<string>0AFE6F17764F6D0FE77A453104605ED3</string>
-				<string>CEBACD6F8994EEED81B5A8A917EFAF57</string>
-				<string>FE445E1D3B6385B326706F5E2676E8BD</string>
-				<string>4643E2C7A2977CC5831E6C9F7848F362</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-PearlCam</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-PearlCam</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F7844FAFBDB347FFE151A45449F4DBC4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CRRulerLayer.m</string>
-			<key>path</key>
-			<string>CRRulerControl/Classes/CRRulerLayer.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FE445E1D3B6385B326706F5E2676E8BD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-PearlCam.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>D41D8CD98F00B204E9800998ECF8427E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01084F7703DD810A0FD72EC7FC637F5B /* CRRulerControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3662A0352B8CD4A6CC497823CEB3D314 /* CRRulerControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02B7E5EA79EF3CFA0344DF6F59E363D2 /* NotificationBackgroundWarningIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 78655DCAEEF1BE19817C32F1F23B111E /* NotificationBackgroundWarningIcon.png */; };
+		03AFE7667670DACDF8E36051B21A81C0 /* RMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD25DF20C6D2240013DB4DB79A42D6B /* RMessageView.m */; };
+		0FC60FB7B8B7555C133EEA0C128226C1 /* RMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB2CAE3A6C2FAC19B48779B652F83F2C /* RMessageView.xib */; };
+		15A95812ABF0BADF5CC6ACB4E9FD60EA /* NotificationBackgroundSuccessIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C3034FF1BB3ACC606177A088AE8A67DF /* NotificationBackgroundSuccessIcon.png */; };
+		21AAAFE19747BD23920611A1518C9BF1 /* Pods-PearlCam-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DDC517B4EF6109B4B48E3800ED8FD4 /* Pods-PearlCam-dummy.m */; };
+		24D74F2E8ADC7E9E5F42481C805501A8 /* CRMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 3064320C8C7EE4AD17867362D808960C /* CRMark.m */; };
+		2D5F3070D327FEA858EA9B084830A632 /* NotificationBackgroundSuccessIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40554C27E7838A3596D819A60777800 /* NotificationBackgroundSuccessIcon@2x.png */; };
+		2FBA38B2B5B83733C5D7FCCE5B1D1C31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF0868C4C31C0A2C5E5AC11584020A3 /* Foundation.framework */; };
+		4A553ADFAD921BAEEC07EAEFC9EAB4FE /* CRRulerControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 64FACCFB61ED0F12BE1B66B633A5B3FE /* CRRulerControl.m */; };
+		4B53B2F94ECF367113D76BA6C0A52333 /* PPTopMostController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEFEF9E34EB312908399BFB570E1DE6 /* PPTopMostController-dummy.m */; };
+		4CC9C06D6D7BD5F735790E3A7C625352 /* RMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DD0951AB458FC0E4FFA6B5E8AAF81C3 /* RMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CF0FA0D6A866A4ECA824B4752D04F33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF0868C4C31C0A2C5E5AC11584020A3 /* Foundation.framework */; };
+		4E5B4EEA50BEF0B4D0FE2394D3EB119A /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = CA53592BC9173719E650ED9FDDA377F0 /* HexColors.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		52E878F3C603806878CE61C0F1107CA5 /* UINavigationController+PPTopMostController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DA952C5D52102B08CBDC703314CA3A0 /* UINavigationController+PPTopMostController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		570B0106CA0E92DE4FC00B30D5AFD4A0 /* RMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A33BB8A77E798ECA5B79064CE97BD8 /* RMessage.m */; };
+		596758BBEC68789E6C8928ECE3FC341C /* HexColors.h in Headers */ = {isa = PBXBuildFile; fileRef = DD76FB4D84A415CCFE3651D30FDD8600 /* HexColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6531903D9C4382183F6FF538D5F0FE57 /* UINavigationController+PPTopMostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703F25CC9AF786BB5C19294FE45CE341 /* UINavigationController+PPTopMostController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		659A4D91C8A395EA6409F4906E3F7E13 /* NotificationBackgroundWarningIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F89DAB76618B2D660D6296B75DDF2CC /* NotificationBackgroundWarningIcon@2x.png */; };
+		67BB269A6A04F3ED8CF773DB9419BBA6 /* UIViewController+PPTopMostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0D931695BCEC0506653C49F5E928CB /* UIViewController+PPTopMostController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		68E5054FFE6DF993A14D26B4D7AFD726 /* CRRulerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 587C54EF2331F4D57A64AAF1A61B85BA /* CRRulerLayer.m */; };
+		70928873C7096E37811A066AB5DA1001 /* Pods-PearlCam-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEBACD6F8994EEED81B5A8A917EFAF57 /* Pods-PearlCam-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73C1754E097C0D61EB1CC8D53C902244 /* RMessage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B287E5F41DE45135096540AA3D24531 /* RMessage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77275632A6EF03C235C6C039B62D188D /* UITabBarController+PPTopMostController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A5964B11157F57C8844D0F48FD709A /* UITabBarController+PPTopMostController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		851C6A3623168687A732D1A44C57FE24 /* HexColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2A02A056CB7BDD4AD7103C9566DE75 /* HexColors.framework */; };
+		8528CE6BA0DA1815FA64F6262E070413 /* CRRulerControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 248D862B48755678A6302EA282258CCE /* CRRulerControl-dummy.m */; };
+		8BCD79AD83AC6C2993F2588979B2C7AE /* PPTopMostControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AEDA5FC3994DDA3B8C64EB4292F24E18 /* PPTopMostControllerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DCF5C0EE6AC7543935C51AA756864C0 /* HexColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 485E0AC9D46D011DA60F77E3EFFE6356 /* HexColors-dummy.m */; };
+		8F3B65EE2E3A6E01054B9BBD5DF47D67 /* CRRulerLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0444991038C5033A340CBF98C77ABAA7 /* CRRulerLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94F5E911BDE1D432F2BE04890021AF4F /* RMessage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7822F023562B39D4D6D6682C2CFDE644 /* RMessage-dummy.m */; };
+		A561C7866B765E7CFD2B40303D22D0AE /* CRMark.h in Headers */ = {isa = PBXBuildFile; fileRef = B1224FA7B8DF24ECC5C0F738FF447430 /* CRMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6C85BB18D2D7CCB3F2EE6332D47DA32 /* NotificationButtonBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E8F4B1DF22157F0159E4340CBC711F /* NotificationButtonBackground@2x.png */; };
+		A7765B86318E835AF6092748B451F225 /* PPTopMostController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746E85C0A3C017D8153CC59D074DA55A /* PPTopMostController.framework */; };
+		AC3AA49510DD165C2A5396906884911C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF0868C4C31C0A2C5E5AC11584020A3 /* Foundation.framework */; };
+		AC6A709E0D17DC55F881164A2CDAF1CD /* NotificationButtonBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DFA4309EC9D7EC2AB7CFA12243D1DF3 /* NotificationButtonBackground.png */; };
+		AFCE7611397C966BF9441F898D3AD17F /* RMessageDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = 50868B850B341285B4A55F85E1BA20F1 /* RMessageDefaultDesign.json */; };
+		B4744465FC4E20008749FABCFFE25DB0 /* CRRulerControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D418F4D95DDBBB92DCC8A1FB965D4974 /* CRRulerControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD7BB8B1EDB3F6C3E25162E4499B1B9D /* UIViewController+PPTopMostController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FE0430ED0B60FD960F8EB29A9307D29 /* UIViewController+PPTopMostController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEE9EA824589A1A86B8C4FEEBFDD3E60 /* NotificationBackgroundErrorIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3396C7491A8835BB321443C7B03CE349 /* NotificationBackgroundErrorIcon@2x.png */; };
+		C252EC66E5CC324402B0AEBD0E3CEBB1 /* UITabBarController+PPTopMostController.h in Headers */ = {isa = PBXBuildFile; fileRef = 68D3B6945EE954D8FCE8E12C5F039CCB /* UITabBarController+PPTopMostController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D058DB6402822F59537E4C6C3EAF56A0 /* RMessageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6254BD743CE1E1EBCAB0C03FCC01F46D /* RMessageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D119E26EB035D7A536038DACD20BB5C7 /* PPTopMostController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EFEEF61CAA551DB3F08B70EE1027D22 /* PPTopMostController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1E92AEC9F093E10C69F2B89A14F49F5 /* HexColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 007285C39FA92853CC8AB7377D72409A /* HexColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E46464ECEAF459AEAA999FBE85905098 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF0868C4C31C0A2C5E5AC11584020A3 /* Foundation.framework */; };
+		F2AB24F42B50BBF2E9B274176105C525 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF0868C4C31C0A2C5E5AC11584020A3 /* Foundation.framework */; };
+		FD325228FAF610BDE69A6CECA14538E4 /* NotificationBackgroundErrorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6501372B1E54F65DEC68D984C058F3 /* NotificationBackgroundErrorIcon.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B8B3DDB2B374967F52995B5524FACF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23CE4647591C91D95338D5E9CD9D029D;
+			remoteInfo = CRRulerControl;
+		};
+		20C69DEA9782E4C0B1D10F955EF0DC8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C408D4E183A88B763793C217A66A1950;
+			remoteInfo = HexColors;
+		};
+		68185C028C7CC2D6EA46B58CD42BF99E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F119E55B6F3D603BC70B254C64542699;
+			remoteInfo = PPTopMostController;
+		};
+		6C3A6C39FB5888A0F509A8B3AA4EBF3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F119E55B6F3D603BC70B254C64542699;
+			remoteInfo = PPTopMostController;
+		};
+		C655F0EE6E19F9B773C497FD2B9B24DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C408D4E183A88B763793C217A66A1950;
+			remoteInfo = HexColors;
+		};
+		E1A4517A3C4396237BBA316CDDEEAA0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C98B8B24956494D330E350FBB266F611;
+			remoteInfo = RMessage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		007285C39FA92853CC8AB7377D72409A /* HexColors-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HexColors-umbrella.h"; sourceTree = "<group>"; };
+		0444991038C5033A340CBF98C77ABAA7 /* CRRulerLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CRRulerLayer.h; path = CRRulerControl/Classes/CRRulerLayer.h; sourceTree = "<group>"; };
+		06C4FB2267BDFD7BF38C33AAB5EF1F4E /* HexColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HexColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AFE6F17764F6D0FE77A453104605ED3 /* Pods-PearlCam-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PearlCam-resources.sh"; sourceTree = "<group>"; };
+		101157A910BC1806D33FE85F71606B7C /* Pods-PearlCam.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PearlCam.modulemap"; sourceTree = "<group>"; };
+		1DFA4309EC9D7EC2AB7CFA12243D1DF3 /* NotificationButtonBackground.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationButtonBackground.png; path = RMessage/Assets/NotificationButtonBackground.png; sourceTree = "<group>"; };
+		2486235AF418AD052D050D1DD8C10AF9 /* HexColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HexColors-prefix.pch"; sourceTree = "<group>"; };
+		248D862B48755678A6302EA282258CCE /* CRRulerControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CRRulerControl-dummy.m"; sourceTree = "<group>"; };
+		25DDC517B4EF6109B4B48E3800ED8FD4 /* Pods-PearlCam-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PearlCam-dummy.m"; sourceTree = "<group>"; };
+		27249DA7988869B981E71C15DB0AF831 /* PPTopMostController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PPTopMostController-prefix.pch"; sourceTree = "<group>"; };
+		2DF0868C4C31C0A2C5E5AC11584020A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2FE0430ED0B60FD960F8EB29A9307D29 /* UIViewController+PPTopMostController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+PPTopMostController.h"; path = "PPTopMostController-Files/UIViewController+PPTopMostController.h"; sourceTree = "<group>"; };
+		3064320C8C7EE4AD17867362D808960C /* CRMark.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CRMark.m; path = CRRulerControl/Classes/CRMark.m; sourceTree = "<group>"; };
+		3396C7491A8835BB321443C7B03CE349 /* NotificationBackgroundErrorIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundErrorIcon@2x.png"; path = "RMessage/Assets/NotificationBackgroundErrorIcon@2x.png"; sourceTree = "<group>"; };
+		3662A0352B8CD4A6CC497823CEB3D314 /* CRRulerControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CRRulerControl.h; path = CRRulerControl/Classes/CRRulerControl.h; sourceTree = "<group>"; };
+		3EFEEF61CAA551DB3F08B70EE1027D22 /* PPTopMostController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PPTopMostController-umbrella.h"; sourceTree = "<group>"; };
+		4643E2C7A2977CC5831E6C9F7848F362 /* Pods-PearlCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PearlCam.release.xcconfig"; sourceTree = "<group>"; };
+		46A33BB8A77E798ECA5B79064CE97BD8 /* RMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RMessage.m; path = RMessage/RMessage.m; sourceTree = "<group>"; };
+		485E0AC9D46D011DA60F77E3EFFE6356 /* HexColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HexColors-dummy.m"; sourceTree = "<group>"; };
+		4DA5E52536FE7529501DB09159A604FA /* CRRulerControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CRRulerControl.xcconfig; sourceTree = "<group>"; };
+		4DD0951AB458FC0E4FFA6B5E8AAF81C3 /* RMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RMessage.h; path = RMessage/RMessage.h; sourceTree = "<group>"; };
+		50868B850B341285B4A55F85E1BA20F1 /* RMessageDefaultDesign.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = RMessageDefaultDesign.json; path = RMessage/Assets/RMessageDefaultDesign.json; sourceTree = "<group>"; };
+		587C54EF2331F4D57A64AAF1A61B85BA /* CRRulerLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CRRulerLayer.m; path = CRRulerControl/Classes/CRRulerLayer.m; sourceTree = "<group>"; };
+		593742963A6593AB9CEB8E837632EA76 /* Pods-PearlCam-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PearlCam-frameworks.sh"; sourceTree = "<group>"; };
+		5A1809E5BB5936B1F2BCA1674690D3CC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D7632F02AD897F7CC0C06215417A594 /* RMessage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RMessage.xcconfig; sourceTree = "<group>"; };
+		5DA952C5D52102B08CBDC703314CA3A0 /* UINavigationController+PPTopMostController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+PPTopMostController.h"; path = "PPTopMostController-Files/UINavigationController+PPTopMostController.h"; sourceTree = "<group>"; };
+		6254BD743CE1E1EBCAB0C03FCC01F46D /* RMessageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RMessageView.h; path = RMessage/RMessageView.h; sourceTree = "<group>"; };
+		64FACCFB61ED0F12BE1B66B633A5B3FE /* CRRulerControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CRRulerControl.m; path = CRRulerControl/Classes/CRRulerControl.m; sourceTree = "<group>"; };
+		655964D5519DABD43DE9B445D38ADB6C /* RMessage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RMessage.modulemap; sourceTree = "<group>"; };
+		68D3B6945EE954D8FCE8E12C5F039CCB /* UITabBarController+PPTopMostController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITabBarController+PPTopMostController.h"; path = "PPTopMostController-Files/UITabBarController+PPTopMostController.h"; sourceTree = "<group>"; };
+		703F25CC9AF786BB5C19294FE45CE341 /* UINavigationController+PPTopMostController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+PPTopMostController.m"; path = "PPTopMostController-Files/UINavigationController+PPTopMostController.m"; sourceTree = "<group>"; };
+		746E85C0A3C017D8153CC59D074DA55A /* PPTopMostController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PPTopMostController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7822F023562B39D4D6D6682C2CFDE644 /* RMessage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RMessage-dummy.m"; sourceTree = "<group>"; };
+		78655DCAEEF1BE19817C32F1F23B111E /* NotificationBackgroundWarningIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundWarningIcon.png; path = RMessage/Assets/NotificationBackgroundWarningIcon.png; sourceTree = "<group>"; };
+		79630EBFC99B2DF8C7824BD230722169 /* CRRulerControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CRRulerControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CBE2307A5605CBB38206A14BE16A5D7 /* HexColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HexColors.xcconfig; sourceTree = "<group>"; };
+		872F14D954ABE429C095CA2C3701299F /* Pods_PearlCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PearlCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A2A02A056CB7BDD4AD7103C9566DE75 /* HexColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HexColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DB2118D288B7D13F965549757304E95 /* CRRulerControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRRulerControl-prefix.pch"; sourceTree = "<group>"; };
+		8F5D40A5CF260154EF3FD855AC7D5FA0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F6501372B1E54F65DEC68D984C058F3 /* NotificationBackgroundErrorIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundErrorIcon.png; path = RMessage/Assets/NotificationBackgroundErrorIcon.png; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9AD25DF20C6D2240013DB4DB79A42D6B /* RMessageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RMessageView.m; path = RMessage/RMessageView.m; sourceTree = "<group>"; };
+		9B287E5F41DE45135096540AA3D24531 /* RMessage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RMessage-umbrella.h"; sourceTree = "<group>"; };
+		9C0D931695BCEC0506653C49F5E928CB /* UIViewController+PPTopMostController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+PPTopMostController.m"; path = "PPTopMostController-Files/UIViewController+PPTopMostController.m"; sourceTree = "<group>"; };
+		9F89DAB76618B2D660D6296B75DDF2CC /* NotificationBackgroundWarningIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundWarningIcon@2x.png"; path = "RMessage/Assets/NotificationBackgroundWarningIcon@2x.png"; sourceTree = "<group>"; };
+		A7A5964B11157F57C8844D0F48FD709A /* UITabBarController+PPTopMostController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITabBarController+PPTopMostController.m"; path = "PPTopMostController-Files/UITabBarController+PPTopMostController.m"; sourceTree = "<group>"; };
+		AAEFEF9E34EB312908399BFB570E1DE6 /* PPTopMostController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PPTopMostController-dummy.m"; sourceTree = "<group>"; };
+		AEDA5FC3994DDA3B8C64EB4292F24E18 /* PPTopMostControllerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PPTopMostControllerProtocol.h; path = "PPTopMostController-Files/PPTopMostControllerProtocol.h"; sourceTree = "<group>"; };
+		B1224FA7B8DF24ECC5C0F738FF447430 /* CRMark.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CRMark.h; path = CRRulerControl/Classes/CRMark.h; sourceTree = "<group>"; };
+		B40554C27E7838A3596D819A60777800 /* NotificationBackgroundSuccessIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationBackgroundSuccessIcon@2x.png"; path = "RMessage/Assets/NotificationBackgroundSuccessIcon@2x.png"; sourceTree = "<group>"; };
+		B9DF3E8B29547F1A3672A00ACC2974FB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB2CAE3A6C2FAC19B48779B652F83F2C /* RMessageView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = RMessageView.xib; path = RMessage/Resources/RMessageView.xib; sourceTree = "<group>"; };
+		BE2CF37FF1CA11FAF1C3053760004A24 /* RMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3034FF1BB3ACC606177A088AE8A67DF /* NotificationBackgroundSuccessIcon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = NotificationBackgroundSuccessIcon.png; path = RMessage/Assets/NotificationBackgroundSuccessIcon.png; sourceTree = "<group>"; };
+		C7C1B2514F7A24800BC6B1C6DF1BB7BB /* HexColors.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HexColors.modulemap; sourceTree = "<group>"; };
+		CA53592BC9173719E650ED9FDDA377F0 /* HexColors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HexColors.m; path = Classes/HexColors.m; sourceTree = "<group>"; };
+		CDB58F52D9E75159B90F4EC104AC3FFF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEBACD6F8994EEED81B5A8A917EFAF57 /* Pods-PearlCam-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PearlCam-umbrella.h"; sourceTree = "<group>"; };
+		D418F4D95DDBBB92DCC8A1FB965D4974 /* CRRulerControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRRulerControl-umbrella.h"; sourceTree = "<group>"; };
+		D43A412B904AD408AE76C156940E1134 /* RMessage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RMessage-prefix.pch"; sourceTree = "<group>"; };
+		D57CF7918744A7765501205A1D0B8A45 /* Pods-PearlCam-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PearlCam-acknowledgements.plist"; sourceTree = "<group>"; };
+		DD76FB4D84A415CCFE3651D30FDD8600 /* HexColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HexColors.h; path = Classes/HexColors.h; sourceTree = "<group>"; };
+		E1FBFA98D61F7E27D874F5497AA6C46A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3014FA4557B5F31BF064BCE6F02F0F2 /* Pods-PearlCam-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PearlCam-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E6F60AC06CDBC2E6365F1444BD1D0A38 /* PPTopMostController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PPTopMostController.xcconfig; sourceTree = "<group>"; };
+		E9E8F4B1DF22157F0159E4340CBC711F /* NotificationButtonBackground@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "NotificationButtonBackground@2x.png"; path = "RMessage/Assets/NotificationButtonBackground@2x.png"; sourceTree = "<group>"; };
+		EBA34183AB7C0C5F18FE1F7ECF58A03C /* CRRulerControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CRRulerControl.modulemap; sourceTree = "<group>"; };
+		EBB3F9479D3E10988063EA1588B5CB92 /* PPTopMostController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PPTopMostController.modulemap; sourceTree = "<group>"; };
+		F01EEE2F9F32301FF43128D5114A062C /* PPTopMostController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PPTopMostController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE445E1D3B6385B326706F5E2676E8BD /* Pods-PearlCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PearlCam.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46182E086BD40E3079AC8B376C21E0C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CF0FA0D6A866A4ECA824B4752D04F33 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BA155DC3466C96A26E2FED0479F99BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E46464ECEAF459AEAA999FBE85905098 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD67A83D2CCF1FC9607209886F1533D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC3AA49510DD165C2A5396906884911C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4781F4F9AABEC9DBE337E4A6A50CCC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FBA38B2B5B83733C5D7FCCE5B1D1C31 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE61D49D7F2C7FA30EA98C70E604590B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2AB24F42B50BBF2E9B274176105C525 /* Foundation.framework in Frameworks */,
+				851C6A3623168687A732D1A44C57FE24 /* HexColors.framework in Frameworks */,
+				A7765B86318E835AF6092748B451F225 /* PPTopMostController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C7B07EFF26DE3A31913EB9157364103 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A2A02A056CB7BDD4AD7103C9566DE75 /* HexColors.framework */,
+				746E85C0A3C017D8153CC59D074DA55A /* PPTopMostController.framework */,
+				A35C0CF09A9777DBEC78B24199F90B24 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		481F5CAD18BCD9623450371551A36779 /* PPTopMostController */ = {
+			isa = PBXGroup;
+			children = (
+				AEDA5FC3994DDA3B8C64EB4292F24E18 /* PPTopMostControllerProtocol.h */,
+				5DA952C5D52102B08CBDC703314CA3A0 /* UINavigationController+PPTopMostController.h */,
+				703F25CC9AF786BB5C19294FE45CE341 /* UINavigationController+PPTopMostController.m */,
+				68D3B6945EE954D8FCE8E12C5F039CCB /* UITabBarController+PPTopMostController.h */,
+				A7A5964B11157F57C8844D0F48FD709A /* UITabBarController+PPTopMostController.m */,
+				2FE0430ED0B60FD960F8EB29A9307D29 /* UIViewController+PPTopMostController.h */,
+				9C0D931695BCEC0506653C49F5E928CB /* UIViewController+PPTopMostController.m */,
+				6F6A3B248B6997216EFD167E237C2BCF /* Support Files */,
+			);
+			path = PPTopMostController;
+			sourceTree = "<group>";
+		};
+		592B4D1708434CFA72E0062CC1418DDA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9ECD49BDD9E8519CCB0C5BAA6E8D23F4 /* CRRulerControl */,
+				FEC4E37BFFB45722BA97EE9BC9BED325 /* HexColors */,
+				481F5CAD18BCD9623450371551A36779 /* PPTopMostController */,
+				E8535D5ADB9A10D014E3ECCF46CE416D /* RMessage */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		65C6DA29E27E43D9E4729DFE9513E8E3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5F09CCC7DC8E7E6BA8EA8CC8539C4D8 /* Pods-PearlCam */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6F6A3B248B6997216EFD167E237C2BCF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9DF3E8B29547F1A3672A00ACC2974FB /* Info.plist */,
+				EBB3F9479D3E10988063EA1588B5CB92 /* PPTopMostController.modulemap */,
+				E6F60AC06CDBC2E6365F1444BD1D0A38 /* PPTopMostController.xcconfig */,
+				AAEFEF9E34EB312908399BFB570E1DE6 /* PPTopMostController-dummy.m */,
+				27249DA7988869B981E71C15DB0AF831 /* PPTopMostController-prefix.pch */,
+				3EFEEF61CAA551DB3F08B70EE1027D22 /* PPTopMostController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PPTopMostController";
+			sourceTree = "<group>";
+		};
+		73C6B4092FFA94DD680FB791E1EAC677 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C7C1B2514F7A24800BC6B1C6DF1BB7BB /* HexColors.modulemap */,
+				7CBE2307A5605CBB38206A14BE16A5D7 /* HexColors.xcconfig */,
+				485E0AC9D46D011DA60F77E3EFFE6356 /* HexColors-dummy.m */,
+				2486235AF418AD052D050D1DD8C10AF9 /* HexColors-prefix.pch */,
+				007285C39FA92853CC8AB7377D72409A /* HexColors-umbrella.h */,
+				8F5D40A5CF260154EF3FD855AC7D5FA0 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HexColors";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				3C7B07EFF26DE3A31913EB9157364103 /* Frameworks */,
+				592B4D1708434CFA72E0062CC1418DDA /* Pods */,
+				D047C6DA21AE4CEBEA7A505266A4826C /* Products */,
+				65C6DA29E27E43D9E4729DFE9513E8E3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9ECD49BDD9E8519CCB0C5BAA6E8D23F4 /* CRRulerControl */ = {
+			isa = PBXGroup;
+			children = (
+				B1224FA7B8DF24ECC5C0F738FF447430 /* CRMark.h */,
+				3064320C8C7EE4AD17867362D808960C /* CRMark.m */,
+				3662A0352B8CD4A6CC497823CEB3D314 /* CRRulerControl.h */,
+				64FACCFB61ED0F12BE1B66B633A5B3FE /* CRRulerControl.m */,
+				0444991038C5033A340CBF98C77ABAA7 /* CRRulerLayer.h */,
+				587C54EF2331F4D57A64AAF1A61B85BA /* CRRulerLayer.m */,
+				DF538686CC312D5B81001E1910BF3371 /* Support Files */,
+			);
+			path = CRRulerControl;
+			sourceTree = "<group>";
+		};
+		A35C0CF09A9777DBEC78B24199F90B24 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2DF0868C4C31C0A2C5E5AC11584020A3 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A51788355E2BFAA4201CAF529CD20F36 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A1809E5BB5936B1F2BCA1674690D3CC /* Info.plist */,
+				655964D5519DABD43DE9B445D38ADB6C /* RMessage.modulemap */,
+				5D7632F02AD897F7CC0C06215417A594 /* RMessage.xcconfig */,
+				7822F023562B39D4D6D6682C2CFDE644 /* RMessage-dummy.m */,
+				D43A412B904AD408AE76C156940E1134 /* RMessage-prefix.pch */,
+				9B287E5F41DE45135096540AA3D24531 /* RMessage-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RMessage";
+			sourceTree = "<group>";
+		};
+		BDCB25D511A5745C10DD9C7FF555421B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8F6501372B1E54F65DEC68D984C058F3 /* NotificationBackgroundErrorIcon.png */,
+				3396C7491A8835BB321443C7B03CE349 /* NotificationBackgroundErrorIcon@2x.png */,
+				C3034FF1BB3ACC606177A088AE8A67DF /* NotificationBackgroundSuccessIcon.png */,
+				B40554C27E7838A3596D819A60777800 /* NotificationBackgroundSuccessIcon@2x.png */,
+				78655DCAEEF1BE19817C32F1F23B111E /* NotificationBackgroundWarningIcon.png */,
+				9F89DAB76618B2D660D6296B75DDF2CC /* NotificationBackgroundWarningIcon@2x.png */,
+				1DFA4309EC9D7EC2AB7CFA12243D1DF3 /* NotificationButtonBackground.png */,
+				E9E8F4B1DF22157F0159E4340CBC711F /* NotificationButtonBackground@2x.png */,
+				50868B850B341285B4A55F85E1BA20F1 /* RMessageDefaultDesign.json */,
+				BB2CAE3A6C2FAC19B48779B652F83F2C /* RMessageView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D047C6DA21AE4CEBEA7A505266A4826C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79630EBFC99B2DF8C7824BD230722169 /* CRRulerControl.framework */,
+				06C4FB2267BDFD7BF38C33AAB5EF1F4E /* HexColors.framework */,
+				872F14D954ABE429C095CA2C3701299F /* Pods_PearlCam.framework */,
+				F01EEE2F9F32301FF43128D5114A062C /* PPTopMostController.framework */,
+				BE2CF37FF1CA11FAF1C3053760004A24 /* RMessage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF538686CC312D5B81001E1910BF3371 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBA34183AB7C0C5F18FE1F7ECF58A03C /* CRRulerControl.modulemap */,
+				4DA5E52536FE7529501DB09159A604FA /* CRRulerControl.xcconfig */,
+				248D862B48755678A6302EA282258CCE /* CRRulerControl-dummy.m */,
+				8DB2118D288B7D13F965549757304E95 /* CRRulerControl-prefix.pch */,
+				D418F4D95DDBBB92DCC8A1FB965D4974 /* CRRulerControl-umbrella.h */,
+				E1FBFA98D61F7E27D874F5497AA6C46A /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CRRulerControl";
+			sourceTree = "<group>";
+		};
+		E8535D5ADB9A10D014E3ECCF46CE416D /* RMessage */ = {
+			isa = PBXGroup;
+			children = (
+				4DD0951AB458FC0E4FFA6B5E8AAF81C3 /* RMessage.h */,
+				46A33BB8A77E798ECA5B79064CE97BD8 /* RMessage.m */,
+				6254BD743CE1E1EBCAB0C03FCC01F46D /* RMessageView.h */,
+				9AD25DF20C6D2240013DB4DB79A42D6B /* RMessageView.m */,
+				BDCB25D511A5745C10DD9C7FF555421B /* Resources */,
+				A51788355E2BFAA4201CAF529CD20F36 /* Support Files */,
+			);
+			path = RMessage;
+			sourceTree = "<group>";
+		};
+		F5F09CCC7DC8E7E6BA8EA8CC8539C4D8 /* Pods-PearlCam */ = {
+			isa = PBXGroup;
+			children = (
+				CDB58F52D9E75159B90F4EC104AC3FFF /* Info.plist */,
+				101157A910BC1806D33FE85F71606B7C /* Pods-PearlCam.modulemap */,
+				E3014FA4557B5F31BF064BCE6F02F0F2 /* Pods-PearlCam-acknowledgements.markdown */,
+				D57CF7918744A7765501205A1D0B8A45 /* Pods-PearlCam-acknowledgements.plist */,
+				25DDC517B4EF6109B4B48E3800ED8FD4 /* Pods-PearlCam-dummy.m */,
+				593742963A6593AB9CEB8E837632EA76 /* Pods-PearlCam-frameworks.sh */,
+				0AFE6F17764F6D0FE77A453104605ED3 /* Pods-PearlCam-resources.sh */,
+				CEBACD6F8994EEED81B5A8A917EFAF57 /* Pods-PearlCam-umbrella.h */,
+				FE445E1D3B6385B326706F5E2676E8BD /* Pods-PearlCam.debug.xcconfig */,
+				4643E2C7A2977CC5831E6C9F7848F362 /* Pods-PearlCam.release.xcconfig */,
+			);
+			name = "Pods-PearlCam";
+			path = "Target Support Files/Pods-PearlCam";
+			sourceTree = "<group>";
+		};
+		FEC4E37BFFB45722BA97EE9BC9BED325 /* HexColors */ = {
+			isa = PBXGroup;
+			children = (
+				DD76FB4D84A415CCFE3651D30FDD8600 /* HexColors.h */,
+				CA53592BC9173719E650ED9FDDA377F0 /* HexColors.m */,
+				73C6B4092FFA94DD680FB791E1EAC677 /* Support Files */,
+			);
+			path = HexColors;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		01BF4832D87833CE57F2F86C84A21913 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73C1754E097C0D61EB1CC8D53C902244 /* RMessage-umbrella.h in Headers */,
+				4CC9C06D6D7BD5F735790E3A7C625352 /* RMessage.h in Headers */,
+				D058DB6402822F59537E4C6C3EAF56A0 /* RMessageView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C606EAC7DE45B950F0BF8AE9C79B101 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D119E26EB035D7A536038DACD20BB5C7 /* PPTopMostController-umbrella.h in Headers */,
+				8BCD79AD83AC6C2993F2588979B2C7AE /* PPTopMostControllerProtocol.h in Headers */,
+				52E878F3C603806878CE61C0F1107CA5 /* UINavigationController+PPTopMostController.h in Headers */,
+				C252EC66E5CC324402B0AEBD0E3CEBB1 /* UITabBarController+PPTopMostController.h in Headers */,
+				BD7BB8B1EDB3F6C3E25162E4499B1B9D /* UIViewController+PPTopMostController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A6579675C1297E1823FE1EE125EBEAC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70928873C7096E37811A066AB5DA1001 /* Pods-PearlCam-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55F5108FC7A6AC9EA80B4669EBDC8989 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A561C7866B765E7CFD2B40303D22D0AE /* CRMark.h in Headers */,
+				B4744465FC4E20008749FABCFFE25DB0 /* CRRulerControl-umbrella.h in Headers */,
+				01084F7703DD810A0FD72EC7FC637F5B /* CRRulerControl.h in Headers */,
+				8F3B65EE2E3A6E01054B9BBD5DF47D67 /* CRRulerLayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D17BEB90EB4C27B46F1BB2CD8FF0C542 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1E92AEC9F093E10C69F2B89A14F49F5 /* HexColors-umbrella.h in Headers */,
+				596758BBEC68789E6C8928ECE3FC341C /* HexColors.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		23CE4647591C91D95338D5E9CD9D029D /* CRRulerControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1E7D60060E2181C15CA083E0D740BAA /* Build configuration list for PBXNativeTarget "CRRulerControl" */;
+			buildPhases = (
+				F00CBB8A7936F71BAAB227E7175600E0 /* Sources */,
+				A4781F4F9AABEC9DBE337E4A6A50CCC4 /* Frameworks */,
+				55F5108FC7A6AC9EA80B4669EBDC8989 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CRRulerControl;
+			productName = CRRulerControl;
+			productReference = 79630EBFC99B2DF8C7824BD230722169 /* CRRulerControl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C408D4E183A88B763793C217A66A1950 /* HexColors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 120D0B17EB9DEF64F2E1BC979F24A556 /* Build configuration list for PBXNativeTarget "HexColors" */;
+			buildPhases = (
+				67EF9044B76E629170DD09EE2E94E76D /* Sources */,
+				4BA155DC3466C96A26E2FED0479F99BA /* Frameworks */,
+				D17BEB90EB4C27B46F1BB2CD8FF0C542 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HexColors;
+			productName = HexColors;
+			productReference = 06C4FB2267BDFD7BF38C33AAB5EF1F4E /* HexColors.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C98B8B24956494D330E350FBB266F611 /* RMessage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B8FCDBC87177EF1C23C1E08D825354D /* Build configuration list for PBXNativeTarget "RMessage" */;
+			buildPhases = (
+				73DB29CFABE81A907990A5AA563F961D /* Sources */,
+				CE61D49D7F2C7FA30EA98C70E604590B /* Frameworks */,
+				01BF4832D87833CE57F2F86C84A21913 /* Headers */,
+				9E10AE4304FB32D863E6B1C87A97B76D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7CC094CFADFF78E6ED8C4DEDC9EC3359 /* PBXTargetDependency */,
+				7D1CAB6CD74F2FDC57B5CB53FAC61F92 /* PBXTargetDependency */,
+			);
+			name = RMessage;
+			productName = RMessage;
+			productReference = BE2CF37FF1CA11FAF1C3053760004A24 /* RMessage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D053A989310F76B05C7B834D98781618 /* Pods-PearlCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 933DDF4A16C52EB60F3CFABB7512C7A6 /* Build configuration list for PBXNativeTarget "Pods-PearlCam" */;
+			buildPhases = (
+				AD1C61CF19DC6F0319CB5B58C309A521 /* Sources */,
+				46182E086BD40E3079AC8B376C21E0C3 /* Frameworks */,
+				4A6579675C1297E1823FE1EE125EBEAC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FDBD342434246A7D72E0E64A5D093DE /* PBXTargetDependency */,
+				75A80E1BA64BCA54F49B9F45A9178B62 /* PBXTargetDependency */,
+				4C8A058E782A3C02930DBA1E88B83115 /* PBXTargetDependency */,
+				EBD0F9DC4F1DFE7888145560DCF330A7 /* PBXTargetDependency */,
+			);
+			name = "Pods-PearlCam";
+			productName = "Pods-PearlCam";
+			productReference = 872F14D954ABE429C095CA2C3701299F /* Pods_PearlCam.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F119E55B6F3D603BC70B254C64542699 /* PPTopMostController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F460B2DBA4409B294E1F94267A6AFA68 /* Build configuration list for PBXNativeTarget "PPTopMostController" */;
+			buildPhases = (
+				5044024320963CE9EC8468B031F4AC06 /* Sources */,
+				9BD67A83D2CCF1FC9607209886F1533D /* Frameworks */,
+				0C606EAC7DE45B950F0BF8AE9C79B101 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PPTopMostController;
+			productName = PPTopMostController;
+			productReference = F01EEE2F9F32301FF43128D5114A062C /* PPTopMostController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = D047C6DA21AE4CEBEA7A505266A4826C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23CE4647591C91D95338D5E9CD9D029D /* CRRulerControl */,
+				C408D4E183A88B763793C217A66A1950 /* HexColors */,
+				D053A989310F76B05C7B834D98781618 /* Pods-PearlCam */,
+				F119E55B6F3D603BC70B254C64542699 /* PPTopMostController */,
+				C98B8B24956494D330E350FBB266F611 /* RMessage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9E10AE4304FB32D863E6B1C87A97B76D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD325228FAF610BDE69A6CECA14538E4 /* NotificationBackgroundErrorIcon.png in Resources */,
+				BEE9EA824589A1A86B8C4FEEBFDD3E60 /* NotificationBackgroundErrorIcon@2x.png in Resources */,
+				15A95812ABF0BADF5CC6ACB4E9FD60EA /* NotificationBackgroundSuccessIcon.png in Resources */,
+				2D5F3070D327FEA858EA9B084830A632 /* NotificationBackgroundSuccessIcon@2x.png in Resources */,
+				02B7E5EA79EF3CFA0344DF6F59E363D2 /* NotificationBackgroundWarningIcon.png in Resources */,
+				659A4D91C8A395EA6409F4906E3F7E13 /* NotificationBackgroundWarningIcon@2x.png in Resources */,
+				AC6A709E0D17DC55F881164A2CDAF1CD /* NotificationButtonBackground.png in Resources */,
+				A6C85BB18D2D7CCB3F2EE6332D47DA32 /* NotificationButtonBackground@2x.png in Resources */,
+				AFCE7611397C966BF9441F898D3AD17F /* RMessageDefaultDesign.json in Resources */,
+				0FC60FB7B8B7555C133EEA0C128226C1 /* RMessageView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5044024320963CE9EC8468B031F4AC06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B53B2F94ECF367113D76BA6C0A52333 /* PPTopMostController-dummy.m in Sources */,
+				6531903D9C4382183F6FF538D5F0FE57 /* UINavigationController+PPTopMostController.m in Sources */,
+				77275632A6EF03C235C6C039B62D188D /* UITabBarController+PPTopMostController.m in Sources */,
+				67BB269A6A04F3ED8CF773DB9419BBA6 /* UIViewController+PPTopMostController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67EF9044B76E629170DD09EE2E94E76D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DCF5C0EE6AC7543935C51AA756864C0 /* HexColors-dummy.m in Sources */,
+				4E5B4EEA50BEF0B4D0FE2394D3EB119A /* HexColors.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73DB29CFABE81A907990A5AA563F961D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94F5E911BDE1D432F2BE04890021AF4F /* RMessage-dummy.m in Sources */,
+				570B0106CA0E92DE4FC00B30D5AFD4A0 /* RMessage.m in Sources */,
+				03AFE7667670DACDF8E36051B21A81C0 /* RMessageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD1C61CF19DC6F0319CB5B58C309A521 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21AAAFE19747BD23920611A1518C9BF1 /* Pods-PearlCam-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F00CBB8A7936F71BAAB227E7175600E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24D74F2E8ADC7E9E5F42481C805501A8 /* CRMark.m in Sources */,
+				8528CE6BA0DA1815FA64F6262E070413 /* CRRulerControl-dummy.m in Sources */,
+				4A553ADFAD921BAEEC07EAEFC9EAB4FE /* CRRulerControl.m in Sources */,
+				68E5054FFE6DF993A14D26B4D7AFD726 /* CRRulerLayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C8A058E782A3C02930DBA1E88B83115 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PPTopMostController;
+			target = F119E55B6F3D603BC70B254C64542699 /* PPTopMostController */;
+			targetProxy = 6C3A6C39FB5888A0F509A8B3AA4EBF3C /* PBXContainerItemProxy */;
+		};
+		75A80E1BA64BCA54F49B9F45A9178B62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HexColors;
+			target = C408D4E183A88B763793C217A66A1950 /* HexColors */;
+			targetProxy = C655F0EE6E19F9B773C497FD2B9B24DE /* PBXContainerItemProxy */;
+		};
+		7CC094CFADFF78E6ED8C4DEDC9EC3359 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HexColors;
+			target = C408D4E183A88B763793C217A66A1950 /* HexColors */;
+			targetProxy = 20C69DEA9782E4C0B1D10F955EF0DC8A /* PBXContainerItemProxy */;
+		};
+		7D1CAB6CD74F2FDC57B5CB53FAC61F92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PPTopMostController;
+			target = F119E55B6F3D603BC70B254C64542699 /* PPTopMostController */;
+			targetProxy = 68185C028C7CC2D6EA46B58CD42BF99E /* PBXContainerItemProxy */;
+		};
+		9FDBD342434246A7D72E0E64A5D093DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CRRulerControl;
+			target = 23CE4647591C91D95338D5E9CD9D029D /* CRRulerControl */;
+			targetProxy = 0B8B3DDB2B374967F52995B5524FACF5 /* PBXContainerItemProxy */;
+		};
+		EBD0F9DC4F1DFE7888145560DCF330A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RMessage;
+			target = C98B8B24956494D330E350FBB266F611 /* RMessage */;
+			targetProxy = E1A4517A3C4396237BBA316CDDEEAA0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0EF5EF4FFA8686BB641A5FF0EABBDE70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6F60AC06CDBC2E6365F1444BD1D0A38 /* PPTopMostController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PPTopMostController/PPTopMostController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PPTopMostController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PPTopMostController/PPTopMostController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PPTopMostController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		109728CFE27B94C9DD774BFFBE2D2573 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6F60AC06CDBC2E6365F1444BD1D0A38 /* PPTopMostController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PPTopMostController/PPTopMostController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PPTopMostController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PPTopMostController/PPTopMostController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PPTopMostController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		12914D756594D15C6F2CA12FE5F89F1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		32CF4BAE0FD440A2052597D04AECD181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CBE2307A5605CBB38206A14BE16A5D7 /* HexColors.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HexColors/HexColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HexColors/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HexColors/HexColors.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = HexColors;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		73C6A6EC22D80BB49D3B70DF1C49DC07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DA5E52536FE7529501DB09159A604FA /* CRRulerControl.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CRRulerControl/CRRulerControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CRRulerControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CRRulerControl/CRRulerControl.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CRRulerControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A2688CA587E90E42B5F4AAB20FC43F73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE445E1D3B6385B326706F5E2676E8BD /* Pods-PearlCam.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PearlCam/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PearlCam/Pods-PearlCam.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PearlCam;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A7C09A1A5F4502B010BC9D90ABB3F838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D7632F02AD897F7CC0C06215417A594 /* RMessage.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RMessage/RMessage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RMessage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RMessage/RMessage.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = RMessage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B15A30F8EE377F9BDE42126071415D7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DA5E52536FE7529501DB09159A604FA /* CRRulerControl.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CRRulerControl/CRRulerControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CRRulerControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CRRulerControl/CRRulerControl.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CRRulerControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BEF9A714FFF736171E72D83632495B81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CBE2307A5605CBB38206A14BE16A5D7 /* HexColors.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HexColors/HexColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HexColors/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HexColors/HexColors.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = HexColors;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BFAE5A14C46920814C0409839D1822C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D7632F02AD897F7CC0C06215417A594 /* RMessage.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RMessage/RMessage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RMessage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RMessage/RMessage.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = RMessage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E72E7977875C2D251FC62736BBDDC389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FED59A19D778C0F3AEAB89B6FDE90F5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4643E2C7A2977CC5831E6C9F7848F362 /* Pods-PearlCam.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PearlCam/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PearlCam/Pods-PearlCam.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PearlCam;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		120D0B17EB9DEF64F2E1BC979F24A556 /* Build configuration list for PBXNativeTarget "HexColors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEF9A714FFF736171E72D83632495B81 /* Debug */,
+				32CF4BAE0FD440A2052597D04AECD181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B8FCDBC87177EF1C23C1E08D825354D /* Build configuration list for PBXNativeTarget "RMessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFAE5A14C46920814C0409839D1822C6 /* Debug */,
+				A7C09A1A5F4502B010BC9D90ABB3F838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12914D756594D15C6F2CA12FE5F89F1B /* Debug */,
+				E72E7977875C2D251FC62736BBDDC389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		933DDF4A16C52EB60F3CFABB7512C7A6 /* Build configuration list for PBXNativeTarget "Pods-PearlCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2688CA587E90E42B5F4AAB20FC43F73 /* Debug */,
+				FED59A19D778C0F3AEAB89B6FDE90F5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1E7D60060E2181C15CA083E0D740BAA /* Build configuration list for PBXNativeTarget "CRRulerControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B15A30F8EE377F9BDE42126071415D7F /* Debug */,
+				73C6A6EC22D80BB49D3B70DF1C49DC07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F460B2DBA4409B294E1F94267A6AFA68 /* Build configuration list for PBXNativeTarget "PPTopMostController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				109728CFE27B94C9DD774BFFBE2D2573 /* Debug */,
+				0EF5EF4FFA8686BB641A5FF0EABBDE70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

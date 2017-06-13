@@ -9,6 +9,7 @@
 import UIKit
 import GPUImage
 import AVFoundation
+import RMessage
 
 class FilterManager: NSObject {
 
@@ -185,13 +186,22 @@ class FilterManager: NSObject {
     
     func renderProductionImage(completion : @escaping ((Data) -> Void)) {
         // Normalize the original image
-        var productionImage = ImageUtils.fixOrientation(originalImage, width: originalImage.size.width, height: originalImage.size.height)!
+        var productionImage = ImageUtils.fixOrientation(originalImage, width: originalImage.size.width, height: originalImage.size.height)
+        guard productionImage != nil else {
+            RMessage.showNotification(withTitle: "Failed to process image", subtitle: nil, type: .error, customTypeName: nil, callback: nil)
+            return
+        }
+        
         if cameraPosition == .front {
-            productionImage = ImageUtils.flipImage(productionImage)
+            productionImage = ImageUtils.flipImage(productionImage!)
+            guard productionImage != nil else {
+                RMessage.showNotification(withTitle: "Failed to process image", subtitle: nil, type: .error, customTypeName: nil, callback: nil)
+                return
+            }
         }
         
         let prodPipeline = Pipeline()
-        let prodInput = PictureInput(image: productionImage)
+        let prodInput = PictureInput(image: productionImage!)
         let prodOutput = PictureOutput()
         let prodInputNode = InputNode(input: prodInput)
         let prodOutputNode = OutputNode(output: prodOutput)
