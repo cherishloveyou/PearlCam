@@ -52,6 +52,10 @@ class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, Adjus
         fatalError("init(coder:) has not been implemented")
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initializePreview()
@@ -145,9 +149,7 @@ class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, Adjus
     }
     
     @IBAction func shareButtonDidTap(_ sender: AnyObject) {
-        let items = [self.originalImage]
-        let vc = UIActivityViewController(activityItems: items, applicationActivities: nil)
-        self.present(vc, animated: true, completion: nil)
+        renderProdImageAndShare()
     }
     
     @IBOutlet weak var editButtonDidTap: UIButton!
@@ -178,28 +180,74 @@ class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, Adjus
     
     @IBAction func confirmButtonDidTap(_ sender: Any) {
         #if STANDALONE_MODE
-            renderProdImageAndSave()
+            didTapOnSaveButton()
         #endif
     }
 
+    private func renderProdImageAndShare() {
+        view.isUserInteractionEnabled = false
+        RMessage.showNotification(withTitle: "Processing photo...", type: .success, customTypeName: nil, callback: nil)
+        
+        filterManager.renderProductionImage(completion: { [weak self] (renderedData) in
+            guard let renderedImage = UIImage(data: renderedData) else {
+                RMessage.showNotification(withTitle: "Failed to process image. Please try again", type: .error, customTypeName: nil, callback: nil)
+                return
+            }
+            
+            let sharableItems = [renderedImage]
+            let vc = UIActivityViewController(activityItems: sharableItems, applicationActivities: nil)
+            self?.present(vc, animated: true, completion: nil)
+            self?.view.isUserInteractionEnabled = false
+        })
+    }
+    
+    private func didTapOnSaveButton() {
+        // Check for the authorization to save to photo library
+        let authStatus = PHPhotoLibrary.authorizationStatus()
+        if authStatus == .denied || authStatus == .restricted {
+            showPhotoLibraryAccessDeniedError()
+            return
+        } else if authStatus == .notDetermined {
+            PHPhotoLibrary.requestAuthorization({ [weak self] (newStatus) in
+                DispatchQueue.main.async {
+                    if newStatus == .authorized {
+                        self?.renderProdImageAndSave()
+                    } else {
+                        self?.showPhotoLibraryAccessDeniedError()
+                    }
+                }
+            })
+        } else if authStatus == .authorized {
+            renderProdImageAndSave()
+        }
+    }
+    
+    private func showPhotoLibraryAccessDeniedError() {
+        RMessage.showNotification(withTitle: "Cannot access photo library", subtitle: "Tap here to the Settings app and enable access to the photo library", type: .error, customTypeName: nil, duration: TimeInterval(RMessageDuration.automatic.rawValue), callback: {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
+            }
+        })
+    }
+    
     private func renderProdImageAndSave() {
         view.isUserInteractionEnabled = false
-        RMessage.showNotification(withTitle: "Saving photo...", type: .success, customTypeName: nil, callback: nil)
-        
         filterManager.renderProductionImage(completion: { (renderedData) in
             PHPhotoLibrary.shared().performChanges( {
                 let creationRequest = PHAssetCreationRequest.forAsset()
                 creationRequest.addResource(with: PHAssetResourceType.photo, data: renderedData, options: nil)
-                }, completionHandler: { [weak self] success, error in
-                    DispatchQueue.main.async {
-                        if success {
-                            RMessage.showNotification(withTitle: "Saved to your photo library", type: .success, customTypeName: nil, callback: nil)
-                        } else {
-                            RMessage.showNotification(withTitle: "Failed to save to your photo library", type: .error, customTypeName: nil, callback: nil)
-                        }
-                        
-                        self?.view.isUserInteractionEnabled = false
+            }, completionHandler: { [weak self] success, error in
+                DispatchQueue.main.async {
+                    if success {
+                        RMessage.showNotification(withTitle: "Saved to your photo library", type: .success, customTypeName: nil, callback: nil)
+                    } else {
+                        RMessage.showNotification(withTitle: "Failed to save to your photo library", type: .error, customTypeName: nil, callback: nil)
                     }
+                    
+                    self?.view.isUserInteractionEnabled = true
+                }
             })
         })
     }

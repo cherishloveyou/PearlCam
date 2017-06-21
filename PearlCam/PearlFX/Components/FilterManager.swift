@@ -220,7 +220,9 @@ class FilterManager: NSObject {
         
         prodOutput.encodedImageFormat = .jpeg
         prodOutput.encodedImageAvailableCallback = { (renderedData) in
-            completion(renderedData)
+            DispatchQueue.main.async {
+                completion(renderedData)
+            }            
         }
 
         prodPipeline.render()

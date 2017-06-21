@@ -29,6 +29,10 @@ class PearlCamViewController: UIViewController, CameraOverlayDelegate, CameraDel
     var hasFrontCamera : Bool!
     var hasBackCamera : Bool!
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         camera = CameraController(position : .back)
@@ -230,17 +234,11 @@ class PearlCamViewController: UIViewController, CameraOverlayDelegate, CameraDel
         if authStatus == .notDetermined {
             PHPhotoLibrary.requestAuthorization({  [weak self] (newStatus) in
                 DispatchQueue.main.async {
-                    if newStatus == .authorized {
-                        self?.onImageDataReceived(data)
-                    } else {
-                        self?.showDeniedPhotoLibraryPermissionView()
-                    }
+                    self?.onImageDataReceived(data)
                 }
             })
-        } else if authStatus == .authorized {
-            onImageDataReceived(data)
         } else {
-            showDeniedPhotoLibraryPermissionView()
+            onImageDataReceived(data)
         }
     }
     
