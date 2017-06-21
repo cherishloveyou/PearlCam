@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,7 +11,6 @@
                 <outlet property="adjustmentSelectorView" destination="WeS-ZG-7FV" id="f06-l9-5ri"/>
                 <outlet property="backButton" destination="AIH-Ij-KjJ" id="mZA-AR-e1G"/>
                 <outlet property="confirmButton" destination="kLy-an-Z2r" id="Hyv-0T-NgI"/>
-                <outlet property="editButton" destination="q76-xa-Wtj" id="bmk-eJ-aTM"/>
                 <outlet property="filterSelectorView" destination="a3W-0V-B93" id="Etf-fa-rXU"/>
                 <outlet property="previewView" destination="LUv-fE-s8x" id="Umo-RT-o69"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -26,14 +22,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIH-Ij-KjJ" userLabel="BackButton">
-                    <rect key="frame" x="15" y="672" width="34" height="34"/>
                     <state key="normal" image="BackArrow"/>
                     <connections>
                         <action selector="backButtonDidTap:" destination="-1" eventType="touchUpInside" id="7l9-Yp-Epr"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLy-an-Z2r">
-                    <rect key="frame" x="169" y="671" width="76" height="36"/>
                     <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
                     <state key="normal" title="USE PHOTO">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,29 +36,24 @@
                         <action selector="confirmButtonDidTap:" destination="-1" eventType="touchUpInside" id="0OW-kX-Ih3"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q76-xa-Wtj">
-                    <rect key="frame" x="369" y="671" width="30" height="36"/>
-                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
-                    <state key="normal" title="EDIT">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q76-xa-Wtj">
+                    <state key="normal" image="ShareButton">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="editButtonDidTap:" destination="-1" eventType="touchUpInside" id="pqG-1d-X0p"/>
+                        <action selector="shareButtonDidTap:" destination="-1" eventType="touchUpInside" id="zb5-La-xzl"/>
                     </connections>
                 </button>
                 <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUv-fE-s8x" userLabel="previewView" customClass="RenderView" customModule="GPUImage">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="582"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WeS-ZG-7FV" userLabel="Adjustment Selector View" customClass="AdjustmentSelectorView" customModule="PearlCam" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="527" width="414" height="55"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="55" id="baK-bs-Ka4"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3W-0V-B93" customClass="FilterSelectorView" customModule="PearlCam" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="582" width="414" height="80"/>
                     <color key="backgroundColor" white="0.0" alpha="0.80340325339999996" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="dEW-s7-Fy1"/>
@@ -95,5 +84,6 @@
     </objects>
     <resources>
         <image name="BackArrow" width="34" height="34"/>
+        <image name="ShareButton" width="34" height="34"/>
     </resources>
 </document>

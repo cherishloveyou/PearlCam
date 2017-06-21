@@ -19,7 +19,6 @@ class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, Adjus
     var originalImage : UIImage!
     var cameraPosition : AVCaptureDevicePosition
     
-    @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var previewView: RenderView!
@@ -143,6 +142,12 @@ class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, Adjus
                 self?.adjustmentSelectorView.alpha = 0
             })
         }
+    }
+    
+    @IBAction func shareButtonDidTap(_ sender: AnyObject) {
+        let items = [self.originalImage]
+        let vc = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        self.present(vc, animated: true, completion: nil)
     }
     
     @IBOutlet weak var editButtonDidTap: UIButton!
