@@ -14,17 +14,20 @@ protocol CameraDelegate : NSObjectProtocol {
     func onFatalError(errorMessage : String)
     func didCapturePhoto(data : Data)
     func focusPointDidChange(_ point : CGPoint)
+    func exposurePointDidChange(_ point : CGPoint)
     func focusDidStart()
     func focusDidStop()
     func lightMeterReadingDidChange(_ offset : Float)
     func shutterSpeedReadingDidChange(_ duration : CMTime)
     func isoReadingDidChange(_ iso : Float)
     func exposureModeDidChange(_ mode : AVCaptureExposureMode)
+    func flashModeDidChange(_ mode : AVCaptureFlashMode)
 }
 
 class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
     private var captureSession = AVCaptureSession()
     private var capturePhotoOutput : AVCapturePhotoOutput!
+    private var photoSettings : AVCapturePhotoSettings?
     private let sessionQueue = DispatchQueue.global(qos: .default)
     var isInitialized = false
     
@@ -84,11 +87,21 @@ class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
         return currentCamera?.isExposureModeSupported(.continuousAutoExposure)
     }
 
+    var supportedFlashModes : [AVCaptureFlashMode]?
+    private var currentFlashMode : AVCaptureFlashMode?
+    
+    var flashSupported : Bool? {
+        return currentCamera?.hasFlash
+    }
+    
     weak var delegate : CameraDelegate?
     
     init(position : AVCaptureDevicePosition) {
         cameraPosition = position
         super.init()
+
+        // Create a photo settings
+        createNewPhotoSettings()
         
         // Check for available cameras
         initializeDeviceSupport()
@@ -187,10 +200,24 @@ class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
         previewLayer.backgroundColor = UIColor.black.cgColor
         delegate?.previewLayerBecomeAvailable(previewLayer)
         
+        // Initialize flash modes (only for the first time)
+        if supportedFlashModes == nil {
+            supportedFlashModes = []
+            for flashMode in [AVCaptureFlashMode.off, AVCaptureFlashMode.on, AVCaptureFlashMode.auto] {
+                if capturePhotoOutput.supportedFlashModes.contains(NSNumber(value: flashMode.rawValue)) {
+                    supportedFlashModes?.append(flashMode)
+                    
+                    if flashMode == .auto {
+                        currentFlashMode = .auto
+                    }
+                }
+            }            
+        }
+        
         currentCamera = device
         isInitialized = true
         success = true
-        
+
         // Observing key property changes in the camera
         addCameraObservers()
     }
@@ -203,6 +230,7 @@ class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
             camera.addObserver(self, forKeyPath: #keyPath(AVCaptureDevice.exposureDuration), options: [.old, .new], context: nil)
             camera.addObserver(self, forKeyPath: #keyPath(AVCaptureDevice.iso), options: [.old, .new], context: nil)
             camera.addObserver(self, forKeyPath: #keyPath(AVCaptureDevice.exposureMode), options: [.old, .new], context: nil)
+            camera.addObserver(self, forKeyPath: #keyPath(AVCaptureDevice.exposurePointOfInterest), options: [.old, .new], context: nil)
         }
     }
     
@@ -214,6 +242,7 @@ class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
             camera.removeObserver(self, forKeyPath: #keyPath(AVCaptureDevice.exposureDuration))
             camera.removeObserver(self, forKeyPath: #keyPath(AVCaptureDevice.iso))
             camera.removeObserver(self, forKeyPath: #keyPath(AVCaptureDevice.exposureMode))
+            camera.removeObserver(self, forKeyPath: #keyPath(AVCaptureDevice.exposurePointOfInterest))
         }
     }
     
@@ -259,6 +288,28 @@ class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
         }
     }
     
+    func lockExposureToPoint(_ point : CGPoint) {
+        if let camera = currentCamera {
+            if !camera.isExposurePointOfInterestSupported || !camera.isExposureModeSupported(.continuousAutoExposure) || !camera.isExposureModeSupported(.autoExpose) {
+                debugPrint("Camera \(camera.position) does not support settings exposure point, or does not support auto exposure mode")
+                return
+            }
+            
+            do {
+                try camera.lockForConfiguration()
+                camera.exposurePointOfInterest = point
+                if camera.isExposureModeSupported(.continuousAutoExposure) {
+                    camera.exposureMode = .continuousAutoExposure
+                } else if camera.isExposureModeSupported(.autoExpose) {
+                    camera.exposureMode = .autoExpose
+                }
+                camera.unlockForConfiguration()
+            } catch let error {
+                debugPrint("Failed to set focus point: \(error)")
+            }
+        }
+    }
+    
     func setExposureCompensation(_ ec : Float) {
         if let camera = currentCamera {
             do {
@@ -280,7 +331,21 @@ class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
                 camera.setExposureModeCustomWithDuration(camera.exposureDuration, iso: iso, completionHandler: nil)
                 camera.unlockForConfiguration()
             } catch let error {
-                debugPrint("Failed to set exposure compensation: \(error)")
+                debugPrint("Failed to set iso: \(error)")
+            }
+        }
+    }
+    
+    func setExposure(_ exposure : CMTime) {
+        if let camera = currentCamera {
+            guard camera.isExposureModeSupported(.custom) else { return }
+            guard camera.exposureMode == .custom else { return }
+            do {
+                try camera.lockForConfiguration()
+                camera.setExposureModeCustomWithDuration(exposure, iso: camera.iso, completionHandler: nil)
+                camera.unlockForConfiguration()
+            } catch let error {
+                debugPrint("Failed to set shutter speed: \(error)")
             }
         }
     }
@@ -316,6 +381,40 @@ class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
         }
     }
     
+    func switchToNextAvailableFlashMode() {
+        guard supportedFlashModes != nil else { return }
+        guard photoSettings != nil else { return }
+        
+        let currentFlashModeIndex = supportedFlashModes?.index(of: currentFlashMode!)
+        guard currentFlashModeIndex != nil else { return }
+        var nextIndex = currentFlashModeIndex!
+        if currentFlashModeIndex == 0 {
+            nextIndex = 1
+        } else if currentFlashModeIndex == supportedFlashModes!.count - 1 {
+            nextIndex = 0
+        } else {
+            nextIndex += 1
+        }
+        
+        currentFlashMode = supportedFlashModes![nextIndex]
+        photoSettings!.flashMode = currentFlashMode!
+        delegate?.flashModeDidChange(currentFlashMode!)
+    }
+    
+    func unlockAEL() {
+        if let camera = currentCamera {
+            guard camera.isExposureModeSupported(.continuousAutoExposure) else { return }
+            guard camera.exposureMode != .continuousAutoExposure else { return }
+            do {
+                try camera.lockForConfiguration()
+                camera.exposureMode = .continuousAutoExposure
+                camera.unlockForConfiguration()
+            } catch let error {
+                debugPrint("Failed to unlock AEL: \(error)")
+            }
+        }
+    }
+    
     func capturePhoto() {
         guard let capturePhotoOutput = self.capturePhotoOutput else { return }
         self.sessionQueue.async {
@@ -330,24 +429,32 @@ class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
         }
     }
     
-    private func captureFullSizePhoto() {
-        let photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecJPEG])
-        photoSettings.isHighResolutionPhotoEnabled = true
-        photoSettings.isAutoStillImageStabilizationEnabled = true
-        photoSettings.isHighResolutionPhotoEnabled = true
-        photoSettings.flashMode = .off
+    private func createNewPhotoSettings() {
+        photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecJPEG])
+        photoSettings!.isHighResolutionPhotoEnabled = true
+        photoSettings!.isAutoStillImageStabilizationEnabled = true
+        photoSettings!.isHighResolutionPhotoEnabled = true
+        
+        if currentFlashMode != nil {
+            photoSettings!.flashMode = currentFlashMode!
+        } else {
+            currentFlashMode = photoSettings?.flashMode
+        }
         
         // In addition to the full size photo, also generate a thumbnail imag (to be embedded in the jpeg header)
         let desiredPreviewPixelFormat = NSNumber(value: kCVPixelFormatType_32BGRA)
-        if photoSettings.availablePreviewPhotoPixelFormatTypes.contains(desiredPreviewPixelFormat) {
-            photoSettings.previewPhotoFormat = [
+        if photoSettings!.availablePreviewPhotoPixelFormatTypes.contains(desiredPreviewPixelFormat) {
+            photoSettings!.previewPhotoFormat = [
                 kCVPixelBufferPixelFormatTypeKey as String : desiredPreviewPixelFormat,
                 kCVPixelBufferWidthKey as String : NSNumber(value: 512),
                 kCVPixelBufferHeightKey as String : NSNumber(value: 512)
             ]
         }
-        
-        capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
+    }
+    
+    private func captureFullSizePhoto() {
+        createNewPhotoSettings()
+        capturePhotoOutput.capturePhoto(with: photoSettings!, delegate: self)
     }
     
     // MARK: - AVCapturePhotoCaptureDelegate
@@ -414,6 +521,8 @@ class CameraController: NSObject, AVCapturePhotoCaptureDelegate {
             delegate?.isoReadingDidChange(currentCamera!.iso)
         } else if keyPath == #keyPath(AVCaptureDevice.exposureMode) {
             delegate?.exposureModeDidChange(currentCamera!.exposureMode)
+        } else if keyPath == #keyPath(AVCaptureDevice.exposurePointOfInterest) {
+            delegate?.exposurePointDidChange(currentCamera!.exposurePointOfInterest)
         }
     }
 }

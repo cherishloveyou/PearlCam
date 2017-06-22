@@ -273,6 +273,18 @@ class PearlCamViewController: UIViewController, CameraOverlayDelegate, CameraDel
         camera.setISO(iso)
     }
     
+    func userDidChangeShutterSpeed(_ shutterSpeed: CMTime) {
+        camera.setExposure(shutterSpeed)
+    }
+    
+    func userDidUnlockAEL() {
+        camera.unlockAEL()
+    }
+    
+    func userDidChangeFlashMode() {
+        camera.switchToNextAvailableFlashMode()
+    }
+    
     func focusPointDidChange(_ point: CGPoint) {
         overlay?.focusPointDidChange(point)
     }
@@ -285,6 +297,10 @@ class PearlCamViewController: UIViewController, CameraOverlayDelegate, CameraDel
         overlay?.focusDidStop()
     }
     
+    func exposurePointDidChange(_ point: CGPoint) {
+        overlay?.exposurePointDidChange(point)
+    }
+    
     func lightMeterReadingDidChange(_ offset: Float) {
         overlay?.lightMeterReadingDidChange(offset)
     }
@@ -294,7 +310,11 @@ class PearlCamViewController: UIViewController, CameraOverlayDelegate, CameraDel
     }
     
     func isoReadingDidChange(_ iso: Float) {
-        overlay!.isoReadingDidChange(iso)
+        overlay?.isoReadingDidChange(iso)
+    }
+    
+    func flashModeDidChange(_ mode: AVCaptureFlashMode) {
+        overlay?.flashModeDidChange(mode)
     }
     
     func autoManualModeButtonDidTap() {
@@ -315,6 +335,10 @@ class PearlCamViewController: UIViewController, CameraOverlayDelegate, CameraDel
     
     func didTapOnViewFinder(_ point: CGPoint) {
         camera.focusToPoint(point)
+    }
+    
+    func didLongPressOnViewFinder(_ point: CGPoint) {
+        camera.lockExposureToPoint(point)
     }
     
     // MARK : - Image processing

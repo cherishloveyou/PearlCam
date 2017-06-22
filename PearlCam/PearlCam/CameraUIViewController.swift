@@ -16,8 +16,12 @@ protocol CameraOverlayDelegate : NSObjectProtocol {
     func switchCameraButtonDidTap()
     func shutterButtonDidTap()
     func didTapOnViewFinder(_ point : CGPoint)
+    func didLongPressOnViewFinder(_ point : CGPoint)
     func userDidChangeExpComp(_ ec : Float)
+    func userDidChangeShutterSpeed(_ shutterSpeed : CMTime)
     func userDidChangeISO(_ iso : Float)
+    func userDidChangeFlashMode()
+    func userDidUnlockAEL()
     func autoManualModeButtonDidTap()
 }
 
@@ -35,6 +39,9 @@ class CameraUIViewController: UIViewController, MeterViewDelegate {
     @IBOutlet weak var lightMeterWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var exposureModeButton: UIButton!
     @IBOutlet weak var isoControlView: UIView!
+    @IBOutlet weak var osdLabel: UILabel!
+    @IBOutlet weak var aelButton: UIButton!
+    @IBOutlet weak var flashButton: UIButton!
     
     private var exposureIndicatorOffset : CGFloat = 2
     private var viewFinder : ViewFinder?
@@ -53,6 +60,7 @@ class CameraUIViewController: UIViewController, MeterViewDelegate {
     var expComp : Float = 0
     private var exposureMode : AVCaptureExposureMode?
     private let defaultISO : Float = 100
+    private var currentShutterSpeed : CMTime?
     
     weak var delegate : CameraOverlayDelegate?
     
@@ -60,11 +68,24 @@ class CameraUIViewController: UIViewController, MeterViewDelegate {
     var currentMeter : MeterType?
     private var currentMeterView : MeterView?
     private let meterViewHeight : CGFloat = 70
+    private let exposureMeterScale : Float = 1000
+    
+    private var isLockingExposure = false
+    
+    // OSD text
+    private var osdAttributes = [String : Any]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         exposureView.layer.cornerRadius = 8
+        
+        osdAttributes = [NSStrokeColorAttributeName : UIColor.black,
+                         NSStrokeWidthAttributeName : -1]
+        
+        osdLabel.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        osdLabel.layer.shadowRadius = 13.0
+        osdLabel.layer.shadowOpacity = 0.85
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,22 +108,37 @@ class CameraUIViewController: UIViewController, MeterViewDelegate {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapOnViewFinder(_:)))
         viewFinder!.addGestureRecognizer(tap)
         
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(didLongPressOnViewFinder(_:)))
+        viewFinder!.addGestureRecognizer(longPress)
+
         let expTap = UITapGestureRecognizer(target: self, action: #selector(didTapOnExpControl(_:)))
         expControlView.addGestureRecognizer(expTap)
         
         let isoTap = UITapGestureRecognizer(target: self, action: #selector(didTapOnISOControl(_:)))
         isoControlView.addGestureRecognizer(isoTap)
-
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
-        
         // We always take the default, fixed 4/3 photo, so position the preview layer accordingly
         if let viewFinder = self.viewFinder {
             let aspectRatio = CGFloat(4.0 / 3.0)
             viewFinder.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height / aspectRatio)
+        }
+    }
+    
+    func showMessage(_ message : String) {
+        let text = NSAttributedString(string: message.uppercased(), attributes: osdAttributes)
+        osdLabel.attributedText = text
+        UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut, animations: { [weak self] in
+            self?.osdLabel.transform = CGAffineTransform(translationX: 0, y: -8)
+            self?.osdLabel.alpha = 1.0
+        }) { (finished) in
+            UIView.animate(withDuration: 0.3, delay: 2.0, options: .curveEaseInOut, animations: { [weak self] in
+            self?.osdLabel.alpha = 0
+            self?.osdLabel.transform = CGAffineTransform.identity
+            }, completion: nil)
         }
     }
     
@@ -124,6 +160,12 @@ class CameraUIViewController: UIViewController, MeterViewDelegate {
         }
     }
     
+    func exposurePointDidChange(_ point : CGPoint) {
+        if let viewFinder = viewFinder {
+            viewFinder.aelPointDidChange(point)
+        }
+    }
+    
     func lightMeterReadingDidChange(_ offset: Float) {
         let value = CGFloat(offset + expComp)
         let lightMeterWidth = lightMeterWidthConstraint.constant
@@ -134,15 +176,8 @@ class CameraUIViewController: UIViewController, MeterViewDelegate {
     }
     
     func shutterSpeedReadingDidChange(_ duration: CMTime) {
-        let shutterSpeed = Double(duration.value) / Double(duration.timescale)
-        if shutterSpeed < 1.0 {
-            let displayValue = Int(1.0 / shutterSpeed)
-            shutterSpeedLabel.text = "1/\(displayValue)"
-        } else {
-            let displayValue = Int(shutterSpeed)
-            shutterSpeedLabel.text = "\(displayValue)"
-        }
-        
+        currentShutterSpeed = duration
+        shutterSpeedLabel.text = formatExposureLabel(duration)
     }
     
     func isoReadingDidChange(_ iso : Float) {
@@ -156,8 +191,51 @@ class CameraUIViewController: UIViewController, MeterViewDelegate {
         
         if mode == .autoExpose || mode == .continuousAutoExposure {
             exposureModeButton.setImage(UIImage(named: "AutoExpButton"), for: .normal)
+            if !isLockingExposure {
+                showMessage("AUTO MODE")
+            }
+            
+            expControlLabel.text = formatExposureCompensationLabel(expComp)
         } else {
             exposureModeButton.setImage(UIImage(named: "ManualExpButton"), for: .normal)
+            
+            if !isLockingExposure {
+                showMessage("MANUAL MODE")
+            }
+            
+            expControlLabel.text = formatExposureLabel(currentShutterSpeed)
+        }
+    }
+    
+    func flashModeDidChange(_ mode: AVCaptureFlashMode) {
+        switch mode {
+        case .auto:
+            flashButton.setImage(UIImage(named: "FlashAuto"), for: .normal)
+        case .on:
+            flashButton.setImage(UIImage(named: "FlashOn"), for: .normal)
+        case .off:
+            flashButton.setImage(UIImage(named: "FlashOff"), for: .normal)
+        }
+    }
+
+    private func formatExposureLabel(_ exposure : CMTime?) -> String? {
+        guard exposure != nil else { return nil }
+        let shutterSpeed = Double(exposure!.value) / Double(exposure!.timescale)
+        if shutterSpeed < 1.0 {
+            let displayValue = Int(1.0 / shutterSpeed)
+            return "1/\(displayValue)"
+        } else {
+            let displayValue = Int(shutterSpeed)
+            return "\(displayValue)"
+        }
+    }
+    
+    private func formatExposureCompensationLabel(_ ec : Float?) -> String? {
+        guard ec != nil else { return nil }
+        if ec! >= 0 {
+            return String(format: "+%.1f", ec!)
+        } else {
+            return String(format: "%.1f", ec!)
         }
     }
     
@@ -169,9 +247,15 @@ class CameraUIViewController: UIViewController, MeterViewDelegate {
         let f = CGRect(x: 0, y: meterOriginY, width: view.bounds.width, height: meterViewHeight)
         
         currentMeter = type
-        if type == .exposureCompensation {
+        switch type {
+        case .exposureCompensation:
             currentMeterView = MeterView(meterType : .exposureCompensation, minValue: minExpComp!, maxValue: maxExpComp!, currentValue: expComp, frame: f)
-        } else if type == .iso {
+        case .shutterSpeed:
+            let minDisplayValue = Float(CMTimeGetSeconds(minShutterSpeed!)) * exposureMeterScale
+            let maxDisplayValue = Float(CMTimeGetSeconds(maxShutterSpeed!)) * exposureMeterScale
+            let currentDisplayValue = Float(CMTimeGetSeconds(currentShutterSpeed!)) * exposureMeterScale
+            currentMeterView = MeterView(meterType : .shutterSpeed, minValue: minDisplayValue, maxValue: maxDisplayValue, currentValue: currentDisplayValue, frame: f)
+        case .iso:
             let currentISO = (iso != nil ? iso! : defaultISO)
             currentMeterView = MeterView(meterType : .iso, minValue: minISO!, maxValue: maxISO!, currentValue: currentISO, frame: f)
         }
@@ -195,6 +279,22 @@ class CameraUIViewController: UIViewController, MeterViewDelegate {
             self?.currentMeterView?.transform = CGAffineTransform(translationX: 0, y: 20)
         }) { [weak self] (finished) in
             self?.currentMeterView?.isHidden = true
+        }
+    }
+    
+    private func showAELButton() {
+        aelButton.alpha = 0
+        aelButton.isHidden = false
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            self?.aelButton.alpha = 1
+        }
+    }
+    
+    private func hideAELButton() {
+        UIView.animate(withDuration: 0.2, animations: { [weak self] in
+            self?.aelButton.alpha = 0
+        }) { [weak self] (finished) in
+            self?.aelButton.isHidden = true
         }
     }
     
@@ -227,24 +327,27 @@ class CameraUIViewController: UIViewController, MeterViewDelegate {
         guard currentMeter != nil else { return }
         
         if let meterType = currentMeter {
-            if meterType == .exposureCompensation {
+            switch meterType {
+            case .exposureCompensation:
                 guard minExpComp != nil && maxExpComp != nil else { return }
                 guard value >= minExpComp! && value <= maxExpComp! else { return }
                 expComp = value
-                if expComp >= 0 {
-                    expControlLabel.text = String(format: "+%.1f", expComp)
-                } else {
-                    expControlLabel.text = String(format: "%.1f", expComp)
-                }
-                
+                expControlLabel.text = formatExposureCompensationLabel(expComp)
                 delegate?.userDidChangeExpComp(value)
-            } else if meterType == .iso {
+            case .iso:
                 guard minISO != nil && maxISO != nil else { return }
                 guard value >= minISO! && value <= maxISO! else { return }
                 iso = value
                 let displayValue = Int(iso!)
                 isoLabel.text = "\(displayValue)"
                 delegate?.userDidChangeISO(iso!)
+            case .shutterSpeed:
+                let exp = CMTime(seconds: Double(value / exposureMeterScale), preferredTimescale: currentShutterSpeed!.timescale)
+                guard minShutterSpeed != nil && maxShutterSpeed != nil else { return }
+                guard exp >= minShutterSpeed! && exp <= maxShutterSpeed! else { return }
+                currentShutterSpeed = exp
+                expControlLabel.text = formatExposureLabel(currentShutterSpeed)
+                delegate?.userDidChangeShutterSpeed(exp)
             }
         }
     }
@@ -265,12 +368,45 @@ class CameraUIViewController: UIViewController, MeterViewDelegate {
         }
     }
     
+    @objc private func didLongPressOnViewFinder(_ tap : UILongPressGestureRecognizer) {
+        if currentMeterView != nil && !currentMeterView!.isHidden {
+            fadeOutMeterView()
+            return
+        }
+
+        switch tap.state {
+        case .began:
+            isLockingExposure = true
+            let positionInView = tap.location(in: viewFinder)
+            let positionInCamera = viewFinder?.previewLayer.captureDevicePointOfInterest(for: positionInView)
+            if let pt = positionInCamera {
+                debugPrint("AEL set to \(pt)")
+                delegate?.didLongPressOnViewFinder(pt)
+            }
+
+            viewFinder?.aelDidLock()
+            showAELButton()
+        case .ended:
+            isLockingExposure = false            
+            showMessage("AUTO EXP LOCKED")
+        case .cancelled:
+            isLockingExposure = false
+        default:
+            break
+        }
+    }
+    
     @objc private func didTapOnExpControl(_ tap : UITapGestureRecognizer) {
         if currentMeterView != nil && !currentMeterView!.isHidden {
             fadeOutMeterView()
             return
         } else {
-            fadeInMeterView(.exposureCompensation)
+            if exposureMode == nil || exposureMode! == .autoExpose || exposureMode! == .continuousAutoExposure {
+                fadeInMeterView(.exposureCompensation)
+            } else {
+                guard minShutterSpeed != nil, maxShutterSpeed != nil, currentShutterSpeed != nil else { return }
+                fadeInMeterView(.shutterSpeed)
+            }
         }
     }
     
@@ -290,5 +426,15 @@ class CameraUIViewController: UIViewController, MeterViewDelegate {
             
             fadeInMeterView(.iso)
         }
+    }
+    
+    @IBAction func didTapOnAELButton(_ sender: Any) {
+        delegate?.userDidUnlockAEL()
+        hideAELButton()
+        viewFinder?.aelDidUnlock()
+    }
+    
+    @IBAction func didTapOnFlashButton(_ sender: Any) {
+        delegate?.userDidChangeFlashMode()
     }
 }

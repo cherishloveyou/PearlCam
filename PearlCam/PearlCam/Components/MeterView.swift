@@ -57,17 +57,21 @@ class MeterView: UIView {
         rulerView.rangeLength = maxValue - minValue
         rulerView.setValue(value, animated: false)
         
-        if meterType == .exposureCompensation {
+        switch meterType {
+        case .exposureCompensation:
             rulerView.rulerWidth = self.bounds.width * 1.4
             rulerView.spacingBetweenMarks = 30
-        } else if meterType == .iso {
+        case .iso:
             rulerView.setFrequency(50, for: .all)
             rulerView.rulerWidth = self.bounds.width * 2.0
+            rulerView.spacingBetweenMarks = 60
+        case .shutterSpeed:
+            rulerView.setFrequency(50, for: .all)
+            rulerView.rulerWidth = self.bounds.width * 2.4
             rulerView.spacingBetweenMarks = 60
         }
         
         rulerView.setNeedsLayout()
-        
         rulerView.addTarget(self, action: #selector(rulerValueDidChange(_:)), for: .valueChanged)
     }
     
