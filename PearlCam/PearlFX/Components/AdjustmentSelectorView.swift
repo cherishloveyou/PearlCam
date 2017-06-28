@@ -82,7 +82,8 @@ class AdjustmentSelectorView: UIView {
         super.layoutSubviews()
         scrollView.frame = self.bounds
         
-        var nextX : CGFloat = padding
+        let totalButtonWidth = FilterSelectorView.thumbnailSize * CGFloat(buttons.count) + gap * CGFloat(buttons.count - 1)
+        var nextX : CGFloat = bounds.width / 2 - totalButtonWidth / 2
         let originY : CGFloat = bounds.height / 2 - buttonSize / 2
         for button in buttons {
             button.frame.origin.x = nextX

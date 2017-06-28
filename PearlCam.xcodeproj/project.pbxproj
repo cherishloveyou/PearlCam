@@ -39,8 +39,6 @@
 		18BBA9281EEBACF000BE0090 /* LookupFilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA91D1EEBACF000BE0090 /* LookupFilterNode.swift */; };
 		18BBA9291EEBACF000BE0090 /* PearlFXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA91E1EEBACF000BE0090 /* PearlFXViewController.swift */; };
 		18BBA92A1EEBACF000BE0090 /* PearlFXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA91F1EEBACF000BE0090 /* PearlFXViewController.xib */; };
-		18BBA92B1EEBACF000BE0090 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA9201EEBACF000BE0090 /* test.jpg */; };
-		18BBA92C1EEBACF000BE0090 /* test2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA9211EEBACF000BE0090 /* test2.jpg */; };
 		18BBA92E1EEBAD1200BE0090 /* PearlCam.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BBA92D1EEBAD1200BE0090 /* PearlCam.xcassets */; };
 		18BBA9361EEBAE8F00BE0090 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9341EEBAE8F00BE0090 /* ImageUtils.swift */; };
 		18BBA9371EEBAE8F00BE0090 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBA9351EEBAE8F00BE0090 /* PushButton.swift */; };
@@ -157,8 +155,6 @@
 		18BBA91D1EEBACF000BE0090 /* LookupFilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupFilterNode.swift; sourceTree = "<group>"; };
 		18BBA91E1EEBACF000BE0090 /* PearlFXViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PearlFXViewController.swift; sourceTree = "<group>"; };
 		18BBA91F1EEBACF000BE0090 /* PearlFXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PearlFXViewController.xib; sourceTree = "<group>"; };
-		18BBA9201EEBACF000BE0090 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
-		18BBA9211EEBACF000BE0090 /* test2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test2.jpg; sourceTree = "<group>"; };
 		18BBA92D1EEBAD1200BE0090 /* PearlCam.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PearlCam.xcassets; sourceTree = "<group>"; };
 		18BBA9341EEBAE8F00BE0090 /* ImageUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		18BBA9351EEBAE8F00BE0090 /* PushButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
@@ -310,8 +306,6 @@
 				18BBA91B1EEBACF000BE0090 /* Filters */,
 				18BBA91E1EEBACF000BE0090 /* PearlFXViewController.swift */,
 				18BBA91F1EEBACF000BE0090 /* PearlFXViewController.xib */,
-				18BBA9201EEBACF000BE0090 /* test.jpg */,
-				18BBA9211EEBACF000BE0090 /* test2.jpg */,
 			);
 			path = PearlFX;
 			sourceTree = "<group>";
@@ -492,9 +486,7 @@
 				18BBA96E1EECC52F00BE0090 /* VignetteFilterViewController.xib in Resources */,
 				18BBA9601EEC896200BE0090 /* WhiteBalanceFilterViewController.xib in Resources */,
 				18BBA9721EECC6D400BE0090 /* ColorFilterViewController.xib in Resources */,
-				18BBA92C1EEBACF000BE0090 /* test2.jpg in Resources */,
 				18BBA90D1EEBACD400BE0090 /* Red.png in Resources */,
-				18BBA92B1EEBACF000BE0090 /* test.jpg in Resources */,
 				18BBA9051EEBACD400BE0090 /* ColorPunchCool.png in Resources */,
 				18BBA90E1EEBACD400BE0090 /* Remy.png in Resources */,
 				18BBA8C91EEBAB8C00BE0090 /* Assets.xcassets in Resources */,

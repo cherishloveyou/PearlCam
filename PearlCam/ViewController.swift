@@ -16,8 +16,6 @@ class ViewController: UINavigationController {
 
         let vc = PearlCamViewController()
         pushViewController(vc, animated: false)        
-//        let vc = PearlFXViewController(originalImage: UIImage(named: "test2.jpg")!, cameraPosition: .back)
-//        pushViewController(vc, animated: false)
     }
 
     override func didReceiveMemoryWarning() {

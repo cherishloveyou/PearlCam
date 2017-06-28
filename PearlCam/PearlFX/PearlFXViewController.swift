@@ -197,7 +197,7 @@ class PearlFXViewController: UIViewController, FilterSelectorViewDelegate, Adjus
             let sharableItems = [renderedImage]
             let vc = UIActivityViewController(activityItems: sharableItems, applicationActivities: nil)
             self?.present(vc, animated: true, completion: nil)
-            self?.view.isUserInteractionEnabled = false
+            self?.view.isUserInteractionEnabled = true
         })
     }
     
